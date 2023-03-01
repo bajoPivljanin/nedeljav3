@@ -186,19 +186,32 @@ form ul li{
 }
 #allPostsWrapper .single-post .post-comments form input{
     width: 85%;
-    padding: 0 10px;
+    padding: 10px 20px;
+    background-color: transparent ;
+    outline: none;
+    border: 2px solid #424868;
+    color: white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 #allPostsWrapper .single-post .post-comments form button{
     width: 15%;
     background-color: grey;
+    border: 2px solid #424868;
+    color: white;
+    background-color: #424868;
+    transition: 0.3s;
+}
+#allPostsWrapper .single-post .post-comments form button:hover{
+    background-color: transparent;
 }
 #allPostsWrapper .single-post .post-comments{
     display: none;
 }
 #allPostsWrapper .single-post .post-comments .single-comment{
-    border: 1px dotted green;
+    border: 1px solid hsl(0, 0%, 39%);
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .navsearch{
   background-color: #181c2f;
