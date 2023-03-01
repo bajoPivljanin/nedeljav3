@@ -153,6 +153,11 @@ form ul li{
     background-position: 10px;
     border: 0;
     font-weight: bold;
+    background-color: #424868;
+    transition: 0.3s;
+}
+#allPostsWrapper .single-post .post-actions div button.like-btn:hover{
+    background-color: #4c5275;
 }
 #allPostsWrapper .single-post .post-actions div button.comment-btn{
     background-image: url(img/comment.png);
@@ -161,6 +166,11 @@ form ul li{
     background-position: 10px;
     border: 0;
     font-weight: bold;
+    background-color: #424868;
+    transition: 0.3s;
+}
+#allPostsWrapper .single-post .post-actions div button.comment-btn:hover{
+    background-color: #4c5275;
 }
 .post-actions span{
     margin-right: 4px;
