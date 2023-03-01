@@ -106,7 +106,7 @@ form ul li{
     border-radius: 50%;
     display: block;
     margin: auto;
-    border: 5px solid white;
+    border: 5px solid hsl(0, 0%, 18.82%);
     margin-bottom:20px;
 }
 .inner-container.right-side form{
@@ -130,14 +130,14 @@ form ul li{
     padding: 5px 15px;
 }
 #allPostsWrapper .single-post {
-    background-color: #eaeaea;
+    background-color: #181c2f;
     padding: 15px;
     margin-top: 15px;
-    color: #000;
+    color: white;
 }
 #allPostsWrapper .single-post .post-content {
     padding-bottom: 10px;
-    border-bottom: 1px solid black ;
+    border-bottom: 1px solid white ;
     margin-bottom: 10px;
     font-size: 22px;
 }
@@ -152,6 +152,7 @@ form ul li{
     background-repeat: no-repeat;
     background-position: 10px;
     border: 0;
+    font-weight: bold;
 }
 #allPostsWrapper .single-post .post-actions div button.comment-btn{
     background-image: url(img/comment.png);
@@ -159,6 +160,10 @@ form ul li{
     background-repeat: no-repeat;
     background-position: 10px;
     border: 0;
+    font-weight: bold;
+}
+.post-actions span{
+    margin-right: 4px;
 }
 #allPostsWrapper .single-post .post-actions div button.remove-btn{
     border-color: red;
@@ -315,4 +320,4 @@ form ul li{
   .left-side button:hover{
       background-color: #181c2f;
   }
-  
+  .post-content 
