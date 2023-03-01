@@ -68,15 +68,19 @@ document.querySelector('#registrationForm').addEventListener('submit', e => {
 
 let lgn = document.querySelector('#loginForm')
 lgn.addEventListener('submit', e => {
+
     e.preventDefault()
 
     let email = document.querySelector('#login_email').value
     let password = document.querySelector('#login_lozinka').value
-
-    let user = new User()
-    user.email = email
-    user.password = password
-    user.login()
+    if(isNaN(email) || isNaN(password))
+    {
+        let user = new User()
+        user.email = email
+        user.password = password
+        user.login()
+    }
+    
     
 })
 
