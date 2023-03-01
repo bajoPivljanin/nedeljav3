@@ -8,7 +8,6 @@ class UserSearch {
 
   async search(query) {
     const results = await this.user.search(query)
-    console.log(results)
     this.displayResults(results)
     this.addNames(results)
   }
