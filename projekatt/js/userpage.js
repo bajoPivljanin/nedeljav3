@@ -92,6 +92,5 @@ const commentPost = btn => {
     let post_id = main_post_el.getAttribute('data-post-id')
 
     main_post_el.querySelector('.post-comments').style.display = 'block'
-
-         
+     
 }
