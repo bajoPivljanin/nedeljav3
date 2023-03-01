@@ -181,7 +181,7 @@ form ul li{
     transition: 0.3s;
 }
 #allPostsWrapper .single-post .post-comments form{
-    height: 50px;
+    height: 40px;
     margin-top: 15px;
 }
 #allPostsWrapper .single-post .post-comments form input{
@@ -200,7 +200,7 @@ form ul li{
     color: white;
     background-color: #424868;
     transition: 0.3s;
-    padding: 10px 0px;
+    padding: 8px 0px;
 }
 #allPostsWrapper .single-post .post-comments form button:hover{
     background-color: transparent;
