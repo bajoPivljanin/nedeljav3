@@ -39,7 +39,6 @@ async function getUsersPosts(){
 
           let comments = new Comment()
           comments = await comments.get(post.id)
-          console.log(comments)
           let comments_html = ''
           if(comments.length > 0){
               comments.forEach(comment => {
