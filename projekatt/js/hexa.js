@@ -111,7 +111,7 @@ async function getAllPosts() {
             let comments_html = ''
             if(comments.length > 0){
                 comments.forEach(comment => {
-                    comments_html += `<div class="single-comment">${comment.content} autor ${comment.username}</div>`
+                    comments_html += `<div class="single-comment"><span style = "color:gray" id="usernamecom">${comment.username}</span>  ${comment.content}</div>`
                 })
             } 
            
