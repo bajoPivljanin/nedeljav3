@@ -31,6 +31,19 @@ class Post {
         let data = await response.json()
         return data
     }
+    async getUserPost(userId) {
+        let response = await fetch(this.api_url + '/posts');
+        let data = await response.json();
+        let res=[];
+        data.forEach(e => {
+            if(e.user_id==userId)
+            {
+                res.push(e);
+            }      
+        });
+        
+        return res;
+    }
     like(post_id, likes){
         let data = {
             likes: likes

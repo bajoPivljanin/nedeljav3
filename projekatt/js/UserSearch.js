@@ -8,8 +8,9 @@ class UserSearch {
 
   async search(query) {
     const results = await this.user.search(query)
+    console.log(results)
     this.displayResults(results)
-    this.addNames()
+    this.addNames(results)
   }
 
   displayResults(results) {
@@ -47,12 +48,14 @@ class UserSearch {
       this.resultContainer.style.opacity='1';
     })
   }
-  addNames(){
+  addNames(userId){
     let useri = document.querySelectorAll('.singleitemsearchh');
-        useri.forEach(e => {
+        useri.forEach((e,i) => {
             e.addEventListener('click',()=>{
                 
-                let myData = {Username:`${e.querySelector('h4').innerHTML}`,email:`${e.querySelector('p').innerHTML}`} ;
+                let myData = {Username:`${e.querySelector('h4').innerHTML}`,
+                email:`${e.querySelector('p').innerHTML}`,
+                userId:userId[i].id}
                 let queryParams = encodeURIComponent(JSON.stringify(myData));
                 window.location.href = 'userpage.html?data='+queryParams;
             })
