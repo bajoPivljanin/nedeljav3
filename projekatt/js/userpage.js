@@ -109,7 +109,7 @@ const commentPostSubmit = e => {
 
   let comment_value = main_post_el.querySelector('input').value
   main_post_el.querySelector('input').value = ''
-  main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value}</div>`
+  main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment"> ${comment_value}</div>`
 
   let comment = new Comment()
   comment.content = comment_value

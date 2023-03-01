@@ -72,7 +72,7 @@ form ul li{
 }
 .custom-modal{
     display: none;
-    background-color: black;
+    background-color: #181c2f;
     box-shadow: rgba(255, 255, 255, 0.8) 0 0 1000px 1000px;
     max-width: 650px;
     margin: auto;
@@ -82,6 +82,7 @@ form ul li{
     left: 0;
     right: 0;
     width: 100%;
+    border-radius: 20px;
 }
 .custom-modal button#closeModal{
     height: 20px;
@@ -351,4 +352,25 @@ form ul li{
   }
   .remove-btn:hover{
     border-color: red;
+  }
+  .custom-modal input{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    color: white;
+  }
+  .custom-modal button{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 5px 25px;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .custom-modal button:hover{
+    background-color: #393f5d;
   }
