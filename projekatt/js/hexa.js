@@ -111,7 +111,7 @@ async function getAllPosts() {
             let comments_html = ''
             if(comments.length > 0){
                 comments.forEach(comment => {
-                    comments_html += `<div class="single-comment">${comment.content}</div>`
+                    comments_html += `<div class="single-comment">${comment.content} autor ${comment.username}</div>`
                 })
             } 
            
@@ -214,7 +214,7 @@ const commentPostSubmit = e => {
 
     let comment_value = main_post_el.querySelector('input').value
     main_post_el.querySelector('input').value = ''
-    main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value}</div>`
+    main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value} </div>`
     async function Name(){
         let user = new User()
         user = await user.get(session_id)
