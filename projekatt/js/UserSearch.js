@@ -30,13 +30,9 @@ class UserSearch {
     this.resultContainer.innerHTML = html
   }
   async displayUser(userId) {
-    console.log('displayUser called with userId', userId);
     const user = await this.user.get(userId);
-    console.log('user data:', user);
     const usernameElem = document.querySelector('#username');
-    console.log('username element:', usernameElem);
     const emailElem = document.querySelector('#email');
-    console.log('email element:', emailElem);
 
     usernameElem.innerHTML = user.username;
     emailElem.innerHTML = user.email;
