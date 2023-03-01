@@ -181,7 +181,7 @@ form ul li{
     transition: 0.3s;
 }
 #allPostsWrapper .single-post .post-comments form{
-    height: 30px;
+    height: 50px;
     margin-top: 15px;
 }
 #allPostsWrapper .single-post .post-comments form input{
