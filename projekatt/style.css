@@ -297,3 +297,22 @@ form ul li{
     opacity: 0.9;
     padding-left: 15px;
 }
+.left-side #email{
+    color: #6b6a6a;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  .left-side #username{
+      font-size: 20px;
+  }
+  .left-side button{
+      color: white;
+      padding: 5px 10px;
+      background-color: transparent;
+      border: 2px solid #181c2f;
+      transition: 0.2s;
+  }
+  .left-side button:hover{
+      background-color: #181c2f;
+  }
+  
