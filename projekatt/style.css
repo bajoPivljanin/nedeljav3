@@ -176,9 +176,9 @@ form ul li{
     margin-right: 4px;
 }
 #allPostsWrapper .single-post .post-actions div button.remove-btn{
-    border-color: red;
     color: red;
     padding: 5px 15px;
+    transition: 0.3s;
 }
 #allPostsWrapper .single-post .post-comments form{
     height: 30px;
@@ -329,4 +329,10 @@ form ul li{
   }
   .left-side button:hover{
       background-color: #424868;
+  }
+  .remove-btn{
+    background-color: #424868;
+  }
+  .remove-btn:hover{
+    border-color: red;
   }
