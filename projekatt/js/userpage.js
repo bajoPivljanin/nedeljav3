@@ -90,7 +90,10 @@ const commentPost = btn => {
     let main_post_el = btn.closest('.single-post')
     let post_id = main_post_el.getAttribute('data-post-id')
 
-    main_post_el.querySelector('.post-comments').style.display = 'block'
+    if(main_post_el.querySelector('.post-comments').style.display=='block')
+        main_post_el.querySelector('.post-comments').style.display= 'none'
+    else
+        main_post_el.querySelector('.post-comments').style.display = 'block'
      
 }
 const commentPostSubmit = e => {
