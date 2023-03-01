@@ -93,3 +93,24 @@ const commentPost = btn => {
     main_post_el.querySelector('.post-comments').style.display = 'block'
      
 }
+const commentPostSubmit = e => {
+  e.preventDefault()
+
+  let btn = e.target
+  btn.setAttribute('disabled', 'true')
+  
+  let main_post_el = btn.closest('.single-post')
+  let post_id = main_post_el.getAttribute('data-post_id')
+
+  //let html = main_post_el.querySelector('.post-comments').innerHTML
+
+  let comment_value = main_post_el.querySelector('input').value
+  main_post_el.querySelector('input').value = ''
+  main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value}</div>`
+
+  let comment = new Comment()
+  comment.content = comment_value
+  comment.user_id = session_id
+  comment.post_id = post_id
+  comment.create()
+}
