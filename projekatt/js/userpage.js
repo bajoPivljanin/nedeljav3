@@ -42,11 +42,9 @@ async function getUsersPosts(){
 
           if(comments.length > 0){
               comments.forEach(comment => {
-                  comments_html += `<div class="single-comment">${comment.content} autor ${comments.username}</div>`
+                  comments_html += `<div class="single-comment">${comment.content} autor ${comment.username}</div>`
               })
           } 
-         await Pokusaj();
-          console.log('bbbbb');
           let html =  document.querySelector('#allPostsWrapper').innerHTML
           document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
                                                                               <div class="post-content">${post.content}</div>
