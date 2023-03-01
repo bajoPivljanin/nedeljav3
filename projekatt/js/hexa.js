@@ -23,7 +23,7 @@ else{
 document.querySelector('#logout').addEventListener('click', e =>{
     e.preventDefault()
     session.destroySession()
-    window.location.href = '/'
+    window.location.href = 'index.html'
 })
 
 document.querySelector('#editAccount').addEventListener('click', () =>{
