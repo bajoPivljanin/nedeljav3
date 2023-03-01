@@ -94,4 +94,3 @@ const commentPost = btn => {
     main_post_el.querySelector('.post-comments').style.display = 'block'
      
 }
-console.log('nesretnik')
