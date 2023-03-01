@@ -36,8 +36,6 @@ class UserSearch {
 
     usernameElem.innerHTML = user.username;
     emailElem.innerHTML = user.email;
-
-    window.location.href = 'userpage.html';
 }
 
 
@@ -53,8 +51,10 @@ class UserSearch {
     let useri = document.querySelectorAll('.singleitemsearchh');
         useri.forEach(e => {
             e.addEventListener('click',()=>{
-                document.querySelector('#searchUsername').innerHTML = e.querySelector('h4').innerHTML;
-                document.querySelector('#searchEmail').innerHTML = e.querySelector('p').innerHTML       
+                
+                let myData = {Username:`${e.querySelector('h4').innerHTML}`,email:`${e.querySelector('p').innerHTML}`} ;
+                let queryParams = encodeURIComponent(JSON.stringify(myData));
+                window.location.href = 'userpage.html?data='+queryParams;
             })
         }) 
   }
