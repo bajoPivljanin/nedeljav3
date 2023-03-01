@@ -387,3 +387,12 @@ form ul li{
     font-weight: bold;
     font-size: 30px;
   }
+  .single-comment #usernamecom{
+    background-color: #181c2f;
+    position: absolute;
+    top: -13px;
+  }
+  .single-comment{
+    position: relative;
+    word-break:break-all;
+  }
