@@ -374,3 +374,16 @@ form ul li{
   .custom-modal button:hover{
     background-color: #393f5d;
   }
+  .navsearch h2{
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    cursor: pointer;
+  }
+  .navsearch a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
