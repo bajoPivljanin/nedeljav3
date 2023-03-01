@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hexa</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="img/logo.png" alt="" srcset="">
+    </div>
+    <h1>Drustvena mreza namenjena hakerima</h1>
+
+    <div class="main-wrapper">
+        <form id="loginForm" >
+            <h2>Login</h2>
+
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" id="login_email" placeholder="example@email.com">
+            </div>
+
+            <div>
+                <label>Lozinka:</label>
+                <input type="password" name="lozinka" id="login_lozinka" placeholder="******">
+            </div>
+            
+            <div>
+                <button id="btn">Uloguj se</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="no-acc-register">
+        <p>Nemas nalog?</p>
+        <button id="registracija">Registruj se</button>
+    </div>
+    <div class="custom-modal">
+        <button id="closeModal">X</button>
+        <form id="registrationForm">
+            <h2>Registracija korisnika</h2>
+                <div>
+                    <label for="korisnicko_ime">Korisnicko ime: *</label>
+                    <input type="text" id="korisnicko_ime" name="korisnicko_ime" placeholder="example123">
+                </div>
+
+                <div>
+                    <label for="email">Email adresa: *</label>
+                    <input type="text" id="email" name="register_email" placeholder="example@email.com">
+                </div>
+    
+                <div>
+                    <label for="lozinka">Lozinka: *</label>
+                    <input type="password" id="lozinka" name="register_lozinka" placeholder="******">
+                </div>
+
+                <div>
+                    <label for="ponovi_lozinku">Ponovi lozinku: *</label>
+                    <input type="password" id="ponovi_lozinku" name="ponovi_lozinku" placeholder="******">
+                </div>
+
+                <div>
+                    <button>Registruj se</button>
+                </div>
+        </form>
+    </div> 
+    <script src="js/Validator.js"></script>
+    <script src="js/Session.js"></script>
+    <script src="js/User.js"></script>
+    <script src="js/app.js"></script>
+   
+    
+</body>
+</html>
