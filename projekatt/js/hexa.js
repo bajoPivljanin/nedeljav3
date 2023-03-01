@@ -17,7 +17,7 @@ if(session_id!== ""){
     populateUserData()
 }
 else{
-    window.location.href = "/"
+    window.location.href = "index.html"
 }
 
 document.querySelector('#logout').addEventListener('click', e =>{
