@@ -6,7 +6,7 @@
 body{
     font-family: sans-serif;
     /*padding: 50px;*/
-    background-image: url(img/bg.jpg);
+    background-color: #181c2f;
     color: white;
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.8) 0 0 0 10000px inset;
