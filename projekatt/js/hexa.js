@@ -163,6 +163,7 @@ async function getUsersPosts(){
             let comments_html = ''
             if(comments.length > 0){
                 comments.forEach(comment => {
+                    console.log('aa')
                     comments_html += `<div class="single-comment">${comment.content} Autor ${comment.username}</div>`
                 })
             } 
