@@ -20,7 +20,7 @@ class Comment {
         })
         .then(response => response.json())
         .then(data => {
-           alert('Postavljen komentar')
+           //alert('Postavljen komentar')
         })
     }
 

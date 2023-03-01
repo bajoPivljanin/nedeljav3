@@ -59,7 +59,7 @@ class Post {
         })
         .then(response => response.json())
         .then(data => {
-           alert('Post je lajkovan')
+           //alert('Post je lajkovan')
         })
     }
     delete(post_id) {
@@ -68,7 +68,7 @@ class Post {
         })
         .then(response => response.json())
         .then(data => {
-           alert('Post je obrisan')
+           //alert('Post je obrisan')
         })
     }
 }
