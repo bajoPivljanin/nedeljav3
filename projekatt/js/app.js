@@ -6,11 +6,17 @@ if(session!== ""){
 }
 
 document.querySelector('#registracija').addEventListener('click', () =>{
-    document.querySelector('.custom-modal').style.display = 'block'
-})
-document.querySelector('#closeModal').addEventListener('click', () =>{
-    document.querySelector('.custom-modal').style.display = 'none'
-})
+    if(document.querySelector('#registracija').innerText=="Registruj se"){
+        document.querySelector('.registerContainer').style.display = 'block'
+        document.querySelector('.main-wrapper').style.display = 'none'
+        document.querySelector('#registracija').innerText="Uloguj se"
+    }else{
+        document.querySelector('.registerContainer').style.display = 'none'
+        document.querySelector('.main-wrapper').style.display = 'block';
+        document.querySelector('#registracija').innerText="Registruj se"
+    }
+    
+});
 
 let config = {
 
