@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    padding: 50px;
+    background-color: #151515;
+    background-image: url('img/background.webp');
+    background-position: center;
+    background-size:cover ;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 0 10000px inset;
+    transition: all .2s;
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+::-webkit-scrollbar-thumb{
+    scrollbar-width: 0px;
+    color:#000;
+}
+h1{
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+h2{
+    margin-bottom: 15px;
+}
+.logo{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main-wrapper{
+    max-width: 550px;
+    margin: auto;
+    background-color: rgba(15, 15, 15);
+    border-radius: 1vw;
+    backdrop-filter: blur(20px);
+    mix-blend-mode:lighten;
+    padding: 50px;
+    border:1px solid white;
+}
+.loginForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form div{
+    padding: 15px 0;
+    width: 100%;
+}
+form div:has(button){
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form div label {
+   display: block;
+   font-weight: bold; 
+   font-size: 16px;
+   padding:10px;
+}
+form div input {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 10px;
+    background-color: inherit;
+    border:1px solid white;
+    border-radius: .8vw;
+    color:white;
+    transition: all .1s;
+}
+form div input::placeholder{
+    color:rgb(249, 249, 249,.8);
+    font-size: 16px;
+}
+form div input:active,form div input:focus-visible{
+    border:3px solid white;
+    outline: none;
+}
+
+form div button{
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 18px;
+    color:white;
+    border:2px solid white;
+    border-radius: .2vw;
+    background-color: #13161c;
+}
+button{
+    cursor: pointer;
+    color:white;
+    border:2px solid white;
+    border-radius: .2vw;
+    background-color: #13161c;
+}
+form ul{
+    list-style: none;
+}
+form ul li{
+    color: red;
+}
+.no-acc-register{
+    text-align: center;
+    margin-top: 50px;
+}
+.no-acc-register button{
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.no-acc-register p{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+body .registerContainer
+{
+    display:none;
+}
+button#closeModal{
+    height: 20px;
+    width: 20px;
+    color: white;
+    background-color: transparent;
+    border: 0;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.inner-container{
+    border: 1px solid green;
+    padding: 15px;
+}
+.inner-container .left-side{
+    text-align: center;
+}
+.inner-container img.profile {
+    width: 70%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 5px solid white;
+    margin-bottom:20px;
+}
+.inner-container.right-side form{
+    display: flex;
+    height: 100px;
+}
+.inner-container.right-side form textarea{
+    width: 85%;
+    border: 0;
+    padding: 10px;
+    resize: none;
+    outline-color: green;
+}
+.inner-container.right-side form button{
+    border: 0;
+    width: 15%;
+}
+#deleteProfile {
+    border: 2px solid red;
+    color: red;
+    padding: 5px 15px;
+}
+#allPostsWrapper .single-post {
+    background-color: #eaeaea;
+    padding: 15px;
+    margin-top: 15px;
+    color: #000;
+}
+#allPostsWrapper .single-post .post-content {
+    padding-bottom: 10px;
+    border-bottom: 1px solid black ;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+#allPostsWrapper .single-post .post-actions{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+#allPostsWrapper .single-post .post-actions div button.like-btn{
+    background-image: url(img/like.png);
+    padding: 5px 15px 5px 40px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border: 0;
+}
+#allPostsWrapper .single-post .post-actions div button.comment-btn{
+    background-image: url(img/comment.png);
+    padding: 5px 15px 5px 40px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border: 0;
+}
+#allPostsWrapper .single-post .post-actions div button.remove-btn{
+    border-color: red;
+    color: red;
+    padding: 5px 15px;
+}
+#allPostsWrapper .single-post .post-comments form{
+    height: 30px;
+    margin-top: 15px;
+}
+#allPostsWrapper .single-post .post-comments form input{
+    width: 85%;
+    padding: 0 10px;
+}
+#allPostsWrapper .single-post .post-comments form button{
+    width: 15%;
+    background-color: grey;
+}
+#allPostsWrapper .single-post .post-comments{
+    display: none;
+}
+#allPostsWrapper .single-post .post-comments .single-comment{
+    border: 1px dotted green;
+    padding: 10px;
+    margin-top: 10px;
+}

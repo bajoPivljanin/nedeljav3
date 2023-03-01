@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleIndex.css">
     <title>Hexa</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
     <h1>Drustvena mreza namenjena hakerima</h1>
 
     <div class="main-wrapper">
-        <form id="loginForm" >
+        <form id="loginForm" class="loginForm" >
             <h2>Login</h2>
 
             <div>
@@ -32,12 +32,7 @@
             </div>
         </form>
     </div>
-
-    <div class="no-acc-register">
-        <p>Nemas nalog?</p>
-        <button id="registracija">Registruj se</button>
-    </div>
-    <div class="custom-modal">
+    <div class="main-wrapper registerContainer">
         <button id="closeModal">X</button>
         <form id="registrationForm">
             <h2>Registracija korisnika</h2>
@@ -66,6 +61,11 @@
                 </div>
         </form>
     </div> 
+    <div class="no-acc-register">
+        <p>Nemas nalog?</p>
+        <button id="registracija">Registruj se</button>
+    </div>
+    
     <script src="js/Validator.js"></script>
     <script src="js/Session.js"></script>
     <script src="js/User.js"></script>
