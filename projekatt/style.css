@@ -10,6 +10,7 @@ body{
     color: white;
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.8) 0 0 0 10000px inset;
+    padding-bottom: 30px;
 }
 h1{
     text-align: center;
@@ -181,7 +182,7 @@ form ul li{
     transition: 0.3s;
 }
 #allPostsWrapper .single-post .post-comments form{
-    height: 50px;
+    height: 40px;
     margin-top: 15px;
 }
 #allPostsWrapper .single-post .post-comments form input{
@@ -197,13 +198,15 @@ form ul li{
 #allPostsWrapper .single-post .post-comments form button{
     width: 15%;
     border: 2px solid #424868;
-    color: white;
+    color: black;
+    font-weight: bold;
     background-color: #424868;
     transition: 0.3s;
-    padding: 10px 0px;
+    padding: 8px 0px;
 }
 #allPostsWrapper .single-post .post-comments form button:hover{
     background-color: transparent;
+    color: white;
 }
 #allPostsWrapper .single-post .post-comments{
     display: none;
@@ -261,7 +264,7 @@ form ul li{
     overflow-y: auto;
     text-align: justify;
     opacity: 0;
-    border: 2px solid #181c2f;
+    border: 2px solid #424868;
     border-bottom-left-radius: 15px;
     z-index: 99;
 }

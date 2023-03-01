@@ -108,4 +108,27 @@ class User {
     }
     
     
+    async getUserWithComments(user_id) {
+        let user = await this.get(user_id)
+
+        let posts = new Post()
+        posts = await posts.getUserPost(user_id)
+
+        let comments = new Comment()
+
+        for (let post of posts) {
+            let postComments = await comments.get(post.id)
+
+            for (let comment of postComments) {
+                let commentUser = await this.get(comment.user_id)
+                comment.username = commentUser.username
+            }
+
+            post.comments = postComments
+        }
+
+        user.posts = posts
+
+        return user
+    }
 }
