@@ -167,8 +167,6 @@ const commentPostSubmit = e => {
         main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value} </div>`
         Name();
     }
-   
-    
     async function Name(){
         let user = new User()
         user = await user.get(session_id)
