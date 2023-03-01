@@ -162,7 +162,12 @@ const commentPostSubmit = e => {
 
     let comment_value = main_post_el.querySelector('input').value
     main_post_el.querySelector('input').value = ''
-    main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value} </div>`
+    if(isNaN(comment_value))
+    {
+        main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value} </div>`
+        Name();
+    }
+   
     
     async function Name(){
         let user = new User()
@@ -176,8 +181,7 @@ const commentPostSubmit = e => {
         comment.username = user.username
         comment.create()
     }
-    if(isNaN(comment_value))
-        Name();
+        
 }
 const removeMyPost = btn => {
     let post_id = btn.closest('.single-post').getAttribute('data-post_id')
