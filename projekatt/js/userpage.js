@@ -27,7 +27,6 @@ document.addEventListener("click", function(event) {
 async function getUsersPosts(){
   let all_posts = new Post()
   all_posts = await all_posts.getUserPost(myData.userId)
-  console.log(all_posts)
   all_posts.forEach(post => {
       async function getPostUser() {
          
@@ -35,16 +34,23 @@ async function getUsersPosts(){
           user = await user.get(post.user_id)
 
           
+          
           let comments = new Comment()
           comments = await comments.get(post.id)
-          let comments_html = ''
-          if(comments.length > 0){
-              comments.forEach(comment => {
-                  comments_html += `<div class="single-comment">${comment.content} autor ${comments.user_id}</div>`
-              })
-          } 
-         
 
+          let name = new User()
+          name = await name.get(comment.user_id)
+          name.username
+
+          let comments_html = ''
+
+          if(comments.length > 0){
+            comments.forEach(comment => {
+                    comments_html += `<div class="single-comment">${comment.content} autor ${comments.user_id}</div>`
+            })
+          } 
+         await Pokusaj();
+          console.log('bbbbb');
           let html =  document.querySelector('#allPostsWrapper').innerHTML
           document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
                                                                               <div class="post-content">${post.content}</div>
