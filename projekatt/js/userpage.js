@@ -38,10 +38,6 @@ async function getUsersPosts(){
           let comments = new Comment()
           comments = await comments.get(post.id)
 
-          let name = new User()
-          name = await name.get(comment.user_id)
-          name.username
-
           let comments_html = ''
 
           if(comments.length > 0){

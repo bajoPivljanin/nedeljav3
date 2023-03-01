@@ -2,13 +2,15 @@ class Comment {
     post_id = ''
     user_id = ''
     content = ''
+    username= ''
     api_url = 'https://62c9e8e64795d2d81f833412.mockapi.io' 
 
     create() {
         let data = {
             post_id: this.post_id,
             user_id : this.user_id,
-            content: this.content
+            content: this.content,
+            username: this.username
         }
         data = JSON.stringify(data)   
         fetch(this.api_url + '/comments', {

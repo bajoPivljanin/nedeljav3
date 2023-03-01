@@ -1,5 +1,5 @@
 let session = new Session()
-session_id = session.getSession()
+let session_id = session.getSession()
 
 if(session_id!== ""){
     async function populateUserData(){
@@ -214,12 +214,18 @@ const commentPostSubmit = e => {
     let comment_value = main_post_el.querySelector('input').value
     main_post_el.querySelector('input').value = ''
     main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value}</div>`
+    async function Name(){
+        let user = new User()
+        user = await user.get(session_id)
 
-    let comment = new Comment()
-    comment.content = comment_value
-    comment.user_id = session_id
-    comment.post_id = post_id
-    comment.create()
+        let comment = new Comment()
+        comment.content = comment_value
+        comment.user_id = session_id
+        comment.post_id = post_id
+        comment.username = user.username
+        comment.create()
+    }
+    Name();
 }
 const removeMyPost = btn => {
     let post_id = btn.closest('.single-post').getAttribute('data-post_id')
