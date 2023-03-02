@@ -132,8 +132,8 @@ async function getAllPosts() {
                                                                         <div class="post-actions">
                                                                             <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b> ${user.username}</p>
                                                                             <div>
-                                                                                <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span>${post.likes}</span></button>
-                                                                                <button onclick="commentPost(this)" class="comment-btn">Comments</button>
+                                                                                <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span>${post.likes} Likes</span></button>
+                                                                                <button onclick="commentPost(this)" class="comment-btn">Comments ${comments.length}</button>
                                                                                 ${delete_post_html}
                                                                             </div>
                                                                         </div>

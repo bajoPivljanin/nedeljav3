@@ -66,7 +66,7 @@ const likeDislike = btn =>{
         let post_id = btn.closest('.single-post').getAttribute('data-post_id')
         let number_of_likes = parseInt(btn.querySelector('span').innerText)
 
-        btn.querySelector('span').innerText = number_of_likes - 1
+        btn.querySelector('span').innerText = number_of_likes - 1+ " Likes"
 
         let post = new Post()
         post.dislike(post_id,number_of_likes,session_id)
@@ -77,7 +77,7 @@ const likeDislike = btn =>{
         let post_id = btn.closest('.single-post').getAttribute('data-post_id')
         let number_of_likes = parseInt(btn.querySelector('span').innerText)
 
-        btn.querySelector('span').innerText = number_of_likes + 1
+        btn.querySelector('span').innerText = number_of_likes + 1 + " Likes"
 
         let post = new Post()
         post.like(post_id,number_of_likes,session_id)
