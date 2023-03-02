@@ -398,3 +398,6 @@ form ul li{
     position: relative;
     word-break:break-all;
   }
+  .navsearch span{
+    color: #424868;
+  }
