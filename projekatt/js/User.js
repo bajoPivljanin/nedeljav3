@@ -5,29 +5,48 @@ class User {
     password = ''
     api_url = 'https://62c9e8e64795d2d81f833412.mockapi.io' 
 
-    create() {
+    async create() {
         let data = {
             username: this.username,
             email : this.email,
             password: this.password
         }
-        data = JSON.stringify(data)   
-        fetch(this.api_url + '/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: data
-        })
-        .then(response => response.json())
-        .then(data => {
-           // alert('Korisnik kreiran');
-           let session = new Session()
-           session.user_id = data.id
-           session.startSession()
-           
-            window.location.href = 'hexa.html' 
-        })
+        let user = new User()
+        const results = await user.search('')
+        let num = 0;
+        results.forEach(element => {
+            if(element.username == this.username || element.email==this.email)
+            {
+                num=1;
+            }
+            
+        });
+        if(num==1)
+        {
+                alert('korisnik vec postoji!');
+        }
+        else{
+            data = JSON.stringify(data)   
+            fetch(this.api_url + '/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: data
+            })
+            .then(response => response.json())
+            .then(data => {
+                // alert('Korisnik kreiran');
+                let session = new Session()
+                session.user_id = data.id
+                session.startSession()
+                
+                window.location.href = 'hexa.html' 
+            })
+        }
+        
+        
+       
     }
     async get(user_id) {
        let api_url = this.api_url + '/users/' + user_id
@@ -106,7 +125,6 @@ class User {
         })
         return results
     }
-    
     
     async getUserWithComments(user_id) {
         let user = await this.get(user_id)
