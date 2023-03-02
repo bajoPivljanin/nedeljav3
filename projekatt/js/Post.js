@@ -44,10 +44,34 @@ class Post {
         
         return res;
     }
-    like(post_id, likes){
-        let data = {
-            likes: likes
+    async getLikeIds(post_id, user_id, likes)
+    {
+        let api_url = this.api_url + '/posts/' + post_id
+        
+        let response = await fetch(api_url)
+        let data = await response.json()
+        let users = data.user_id;
+        console.log(typeof user_id)
+        if(users.includes(user_id))
+        {
+            console.log("yes")
+            return {
+            likes: likes,
+            like_id: data.user_id
+            }
         }
+        
+        else{
+            console.log("no")
+            return {
+                likes: likes+1,
+                like_id: users.push(user_id)
+            }
+        }
+    }
+    async like(post_id, likes,user_id){
+        let data = await this.getLikeIds(post_id,user_id,likes);
+
         data = JSON.stringify(data)
         
         fetch(this.api_url + '/posts/'+ post_id , {

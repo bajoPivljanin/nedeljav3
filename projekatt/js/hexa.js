@@ -197,7 +197,7 @@ const likePost = btn => {
     btn.setAttribute('disabled','true')
 
     let post = new Post()
-    post.like(post_id,number_of_likes + 1)
+    post.like(post_id,number_of_likes,session_id)
 
 }
 const commentPost = btn => {
