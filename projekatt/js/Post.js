@@ -55,7 +55,7 @@ class Post {
         {
             return {
             likes: likes,
-            like_id: data.user_id
+            like_id: data.like_id
             }
         }
         
