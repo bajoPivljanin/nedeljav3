@@ -16,11 +16,14 @@ class UserSearch {
     let html = ''
 
     results.forEach(user => {
-      html += `<div class ="singleitemsearchh">
+      if(user.username!=document.getElementById('username').innerText && user.username!=document.getElementById('email').innerText){
+        html += `<div class ="singleitemsearchh">
                   <img src="img/profile2.jpg" alt="" srcset="" id="searchimg">
                   <h4>${user.username}</h4>
                   <p>${user.email}</p>
                </div>`
+      }
+      
     })
 
     if (results.length === 0) {
