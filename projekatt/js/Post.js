@@ -51,6 +51,8 @@ class Post {
         let response = await fetch(api_url)
         let data = await response.json()
         let users = data.like_id;
+        console.log(users)
+        console.log(user_id)
         if(users.includes(user_id)==true)
         {
             return {
@@ -62,7 +64,7 @@ class Post {
         else{
             return {
                 likes: likes+1,
-                like_id: users + " " +user_id
+                like_id: users + ' ' + user_id
             }
         }
     }

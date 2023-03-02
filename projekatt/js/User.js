@@ -149,4 +149,23 @@ class User {
 
         return user
     }
+    async likedPost(user_id,post_id)
+    {
+        let api_url = this.api_url + '/posts/' + post_id     
+        let response = await fetch(api_url)
+        let data = await response.json()
+        let users = data.like_id;
+        console.log(users)
+        console.log(user_id)
+        if(users.includes(user_id))
+        {
+            console.log('true')
+            return "disabled"; 
+        } 
+        else
+        {
+            console.log('false')
+            return "";
+        }
+    }
 }

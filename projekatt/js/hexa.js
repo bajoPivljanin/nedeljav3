@@ -108,6 +108,8 @@ async function getAllPosts() {
             let comments = new Comment()
             comments = await comments.get(post.id)
 
+            let answer = await new User().likedPost(session_id,post.id);
+
             let comments_html = ''
             if(comments.length > 0){
                 comments.forEach(comment => {
@@ -116,20 +118,21 @@ async function getAllPosts() {
             } 
            
 
-            let html =  document.querySelector('#allPostsWrapper').innerHTML
+            let html =  document.querySelector('#allPostsWrapper').innerHTML;
             let delete_post_html = ''
             
             if(session_id === post.user_id){
                 delete_post_html = '<button class="remove-btn" onclick="removeMyPost(this)"><i class="fa-regular fa-x"></i></button>'
             }
-
+            
+            
             document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
                                                                         <div class="post-content">${post.content}</div>
                                                                         
                                                                         <div class="post-actions">
                                                                             <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b> ${user.username}</p>
                                                                             <div>
-                                                                                <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span></button>
+                                                                                <button onclick="likePost(this)" class="likePostJS like-btn" ${answer}><span>${post.likes}</span></button>
                                                                                 <button onclick="commentPost(this)" class="comment-btn">Comments</button>
                                                                                 ${delete_post_html}
                                                                             </div>
@@ -142,7 +145,8 @@ async function getAllPosts() {
                                                                             </form>
                                                                             ${comments_html}
                                                                         </div>
-                                                                    </div>` + html
+                                                                    </div>` + html;
+        console.log(document.querySelector('#allPostsWrapper').innerHTML)
         }
         getPostUser()
     })
