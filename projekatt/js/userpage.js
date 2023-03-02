@@ -1,24 +1,24 @@
-let session = new Session()
-let session_id = session.getSession()
+// let session = new Session()
+// let session_id = session.getSession()
 
-if(session_id!== ""){
-    async function populateUserData(){
-        let user = new User()
-        user = await user.get(session_id)
+// if(session_id!== ""){
+//     async function populateUserData(){
+//         let user = new User()
+//         user = await user.get(session_id)
         
-        document.querySelector('#username').innerText = user['username']
-        document.querySelector('#email').innerText = user['email']
+//         document.querySelector('#username').innerText = user['username']
+//         document.querySelector('#email').innerText = user['email']
 
-        document.querySelector('#korisnicko_ime').value = user['username']
-        document.querySelector('#edit_email').value = user['email']
+//         document.querySelector('#korisnicko_ime').value = user['username']
+//         document.querySelector('#edit_email').value = user['email']
         
      
-    }
-    populateUserData()
-}
-else{
-    window.location.href = "index.html"
-}
+//     }
+//     populateUserData()
+// }
+// else{
+//     window.location.href = "index.html"
+// }
 
 
 
@@ -31,24 +31,12 @@ var myData = JSON.parse(decodeURIComponent(dataParam));
 
 window.addEventListener('load',()=>{
     
-    document.querySelector('#searchUsername').innerText = myData.Username;
-    document.querySelector('#searchEmail').innerText = myData.email;
+    document.querySelector('#username').innerText = myData.Username;
+    document.querySelector('#email').innerText = myData.email;
     getUsersPosts();
 })
 
-//Search bar nestaje
-const searchBar = document.querySelector(".navsearch");
-let list = document.getElementById("userneki");
-// Add a click event listener to the document object
-document.addEventListener("click", function(event) {
-  // Check if the target of the click event is inside the search bar
-  if (!searchBar.contains(event.target) && !list.contains(event.target)) {
-    // If the target is not inside the search bar, hide the search bar
-    list.innerHTML ="";
-    list.style.opacity="0";
-    document.querySelector('#aa').ariaPressed="false";
-  }
-});
+
 
 async function getUsersPosts(){
   let all_posts = new Post()
@@ -59,7 +47,7 @@ async function getUsersPosts(){
           let user = new User()
           user = await user.get(post.user_id)
 
-          
+          let answer = await new User().likedPost(session_id,post.id);
           
           let comments = new Comment()
           comments = await comments.get(post.id)
@@ -78,7 +66,7 @@ async function getUsersPosts(){
                                                                               <div class="post-actions">
                                                                                   <p><b>Autor:</b> ${user.username}</p>
                                                                                   <div>
-                                                                                      <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span></button>
+                                                                                      <button onclick="likePost(this)" class="likePostJS like-btn" ${answer}><span>${post.likes}</span></button>
                                                                                       <button onclick="commentPost(this)" class="comment-btn">Comments</button>
                                                                                   </div>
                                                                               </div>
@@ -96,46 +84,4 @@ async function getUsersPosts(){
       getPostUser()
   })
 }
-const likePost = btn => {
-    let main_post_el = btn.closest('.single-post')
-    let post_id = btn.closest('.single-post').getAttribute('data-post_id')
-    let number_of_likes = parseInt(btn.querySelector('span').innerText)
 
-    btn.querySelector('span').innerText = number_of_likes + 1
-    btn.setAttribute('disabled','true')
-
-    let post = new Post()
-    post.like(post_id,number_of_likes + 1)
-
-}
-const commentPost = btn => {
-    let main_post_el = btn.closest('.single-post')
-    let post_id = main_post_el.getAttribute('data-post-id')
-
-    if(main_post_el.querySelector('.post-comments').style.display=='block')
-        main_post_el.querySelector('.post-comments').style.display= 'none'
-    else
-        main_post_el.querySelector('.post-comments').style.display = 'block'
-     
-}
-const commentPostSubmit = e => {
-  e.preventDefault()
-
-  let btn = e.target
-  btn.setAttribute('disabled', 'true')
-  
-  let main_post_el = btn.closest('.single-post')
-  let post_id = main_post_el.getAttribute('data-post_id')
-
-  //let html = main_post_el.querySelector('.post-comments').innerHTML
-
-  let comment_value = main_post_el.querySelector('input').value
-  main_post_el.querySelector('input').value = ''
-  main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment"> ${comment_value}</div>`
-
-  let comment = new Comment()
-  comment.content = comment_value
-  comment.user_id = session_id
-  comment.post_id = post_id
-  comment.create()
-}
