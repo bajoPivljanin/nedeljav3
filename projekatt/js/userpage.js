@@ -46,6 +46,7 @@ document.addEventListener("click", function(event) {
     // If the target is not inside the search bar, hide the search bar
     list.innerHTML ="";
     list.style.opacity="0";
+    document.querySelector('#aa').ariaPressed="false";
   }
 });
 
