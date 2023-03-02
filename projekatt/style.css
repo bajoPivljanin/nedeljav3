@@ -210,6 +210,8 @@ form ul li{
     background-color: #424868;
     transition: 0.3s;
     padding: 8px 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 #allPostsWrapper .single-post .post-comments form button:hover{
     background-color: transparent;
@@ -356,6 +358,7 @@ form ul li{
   }
   .remove-btn{
     background-color: #424868;
+    border-radius: 15px;
   }
   .remove-btn:hover{
     border-color: red;
