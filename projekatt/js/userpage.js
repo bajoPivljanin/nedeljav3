@@ -105,18 +105,23 @@ const likePost = btn => {
     btn.setAttribute('disabled','true')
 
     let post = new Post()
-    post.like(post_id,number_of_likes + 1)
+    post.like(post_id,number_of_likes,session_id)
 
 }
 const commentPost = btn => {
     let main_post_el = btn.closest('.single-post')
-    let post_id = main_post_el.getAttribute('data-post-id')
+    let box = main_post_el.querySelector('.post-comments')
 
-    if(main_post_el.querySelector('.post-comments').style.display=='block')
-        main_post_el.querySelector('.post-comments').style.display= 'none'
+    if(box.style.maxHeight =="500px")
+    {
+        box.style.transition = "all .2s ease-out"
+        box.style.maxHeight ="0px"; 
+    }     
     else
-        main_post_el.querySelector('.post-comments').style.display = 'block'
-     
+    {
+        box.style.maxHeight ="500px" 
+        box.style.transition = "all .5s ease-in"
+    }      
 }
 const commentPostSubmit = e => {
   e.preventDefault()
