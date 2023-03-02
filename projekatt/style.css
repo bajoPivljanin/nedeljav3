@@ -445,3 +445,10 @@ form ul li{
   .navsearch span{
     color: #424868;
   }
+  #posttimg{
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+  .post-actions p{
+    width: 50%;
+  }
