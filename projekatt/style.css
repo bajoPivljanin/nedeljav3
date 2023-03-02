@@ -220,11 +220,11 @@ form ul li{
     position: relative;
 }
 
-#allPostsWrapper .single-post .post-comments form{
+#allPostsWrapper .single-post form{
     height: 40px;
     margin-top: 15px;
 }
-#allPostsWrapper .single-post .post-comments form input{
+#allPostsWrapper .single-post form input{
     width: 85%;
     padding: 17px 20px;
     background-color: transparent ;
@@ -234,7 +234,7 @@ form ul li{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-#allPostsWrapper .single-post .post-comments form button{
+#allPostsWrapper .single-post form button{
     width: 15%;
     border: 2px solid #424868;
     color: black;
@@ -245,12 +245,16 @@ form ul li{
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-#allPostsWrapper .single-post .post-comments form button:hover{
+#allPostsWrapper .single-post form button:hover{
     background-color: transparent;
     color: white;
 }
 #allPostsWrapper .single-post .post-comments{
-    display: none;
+    display: block;
+    max-height: 0px;
+    transition: all .3s;
+    overflow: hidden;
+    overflow-y: auto;
 }
 #allPostsWrapper .single-post .post-comments .single-comment{
     border: 1px solid hsl(0, 0%, 39%);

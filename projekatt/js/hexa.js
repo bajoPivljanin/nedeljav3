@@ -208,10 +208,17 @@ const commentPost = btn => {
     let main_post_el = btn.closest('.single-post')
     let box = main_post_el.querySelector('.post-comments')
 
-    if(box.style.display == "block")
-        box.style.display = "none"
+    if(box.style.maxHeight =="500px")
+    {
+        box.style.transition = "all .2s ease-out"
+        box.style.maxHeight ="0px"; 
+    }     
     else
-        box.style.display = "block";
+    {
+        box.style.maxHeight ="500px" 
+        box.style.transition = "all .5s ease-in"
+    }
+        
     
 
          
