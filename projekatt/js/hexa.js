@@ -202,11 +202,13 @@ const likePost = btn => {
 }
 const commentPost = btn => {
     let main_post_el = btn.closest('.single-post')
-    let post_id = main_post_el.getAttribute('data-post-id')
-    if(main_post_el.querySelector('.post-comments').style.display=='block')
-        main_post_el.querySelector('.post-comments').style.display= 'none'
+    let box = main_post_el.querySelector('.post-comments')
+
+    if(box.style.display == "block")
+        box.style.display = "none"
     else
-        main_post_el.querySelector('.post-comments').style.display = 'block'
+        box.style.display = "block";
+    
 
          
 }
@@ -222,5 +224,6 @@ document.addEventListener("click", function(event) {
     // If the target is not inside the search bar, hide the search bar
     list.innerHTML ="";
     list.style.opacity="0";
+    document.querySelector('#aa').ariaPressed="false";
   }
 });

@@ -43,6 +43,16 @@ class UserSearch {
   init() {
     this.searchBtn.addEventListener('click', () => {
       const query = this.searchInput.value
+      if(this.searchBtn.ariaPressed=="false")
+      {
+        this.search(query)
+        this.resultContainer.style.opacity='1';
+        this.searchBtn.ariaPressed="true";
+      }
+      console.log(query)
+    })
+    this.searchInput.addEventListener('keyup', () => {
+      const query = this.searchInput.value
       this.search(query)
       this.resultContainer.style.opacity='1';
     })
