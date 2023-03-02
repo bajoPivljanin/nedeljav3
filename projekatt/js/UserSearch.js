@@ -49,7 +49,6 @@ class UserSearch {
         this.resultContainer.style.opacity='1';
         this.searchBtn.ariaPressed="true";
       }
-      console.log(query)
     })
     this.searchInput.addEventListener('keyup', () => {
       const query = this.searchInput.value

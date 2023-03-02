@@ -217,11 +217,11 @@ const commentPost = btn => {
 //Search bar nestaje
 const searchBar = document.querySelector(".navsearch");
 let list = document.getElementById("userneki");
-// Add a click event listener to the document object
+
 document.addEventListener("click", function(event) {
-  // Check if the target of the click event is inside the search bar
+
   if (!searchBar.contains(event.target) && !list.contains(event.target)) {
-    // If the target is not inside the search bar, hide the search bar
+
     list.innerHTML ="";
     list.style.opacity="0";
     document.querySelector('#aa').ariaPressed="false";
