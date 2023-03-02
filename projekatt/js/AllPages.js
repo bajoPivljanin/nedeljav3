@@ -1,13 +1,3 @@
-let session = new Session()
-let session_id = session.getSession()
-
-if(session_id!== ""){
-    
-}
-else{
-    window.location.href = "index.html"
-}
-
 
 
 const commentPostSubmit = e => {
