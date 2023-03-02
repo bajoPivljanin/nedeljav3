@@ -74,7 +74,7 @@ document.querySelector('#postForm').addEventListener('submit', e =>{
                                                                     <div class="post-content">${post.content}</div>
                                                                     
                                                                     <div class="post-actions">
-                                                                        <p><b>Autor:</b> ${current_user.username}</p>
+                                                                        <p><b><img src= "img/profile2.jpg" width="4%" id="posttimg"></b> ${current_user.username}</p>
                                                                         <div>
                                                                             <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span>Likes</button>
                                                                             <button onclick="commentPost(this)" class="comment-btn">Comments</button>
@@ -127,7 +127,7 @@ async function getAllPosts() {
                                                                         <div class="post-content">${post.content}</div>
                                                                         
                                                                         <div class="post-actions">
-                                                                            <p><b>Autor:</b> ${user.username}</p>
+                                                                            <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b> ${user.username}</p>
                                                                             <div>
                                                                                 <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span></button>
                                                                                 <button onclick="commentPost(this)" class="comment-btn">Comments</button>
