@@ -252,6 +252,7 @@ form ul li{
     padding-bottom: 5px;
     width: 20%;
 }
+
 #userneki{
     position: absolute;
     left: 38.5%;
@@ -387,6 +388,7 @@ form ul li{
     font-weight: bold;
     font-size: 30px;
   }
+  
   .single-comment #usernamecom{
     background-color: #181c2f;
     position: absolute;
@@ -395,4 +397,7 @@ form ul li{
   .single-comment{
     position: relative;
     word-break:break-all;
+  }
+  .navsearch span{
+    color: #424868;
   }
