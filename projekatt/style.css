@@ -175,7 +175,7 @@ form ul li{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-right:2px solid #6b6a6a;
-    margin-right: -4px;
+    margin-right: -5px;
 }
 #allPostsWrapper .single-post .post-actions div button.like-btn:hover{
     background-color: #4c5275;
@@ -199,10 +199,23 @@ form ul li{
     margin-right: 4px;
 }
 #allPostsWrapper .single-post .post-actions div button.remove-btn{
-    color: red;
-    padding: 5px 15px;
+    color: white;
+    padding: 5px 10px;
     transition: 0.3s;
+    border: 1px solid #6b6a6a;
+    border-radius: 100%;
+    font-size: 10px;
+    position: absolute;
+    top: -8px;
+    right: -9px;
 }
+#allPostsWrapper .single-post .post-actions div button.remove-btn:hover{
+    color: red;
+}
+#allPostsWrapper .single-post {
+    position: relative;
+}
+
 #allPostsWrapper .single-post .post-comments form{
     height: 40px;
     margin-top: 15px;
@@ -372,8 +385,7 @@ form ul li{
       background-color: #424868;
   }
   .remove-btn{
-    background-color: #424868;
-    border-radius: 15px;
+    background-color: #181c2f;
   }
   .remove-btn:hover{
     border-color: red;
