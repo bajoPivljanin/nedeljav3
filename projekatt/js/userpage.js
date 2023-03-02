@@ -1,24 +1,11 @@
-// let session = new Session()
-// let session_id = session.getSession()
+let session = new Session()
+let session_id = session.getSession()
 
-// if(session_id!== ""){
-//     async function populateUserData(){
-//         let user = new User()
-//         user = await user.get(session_id)
-        
-//         document.querySelector('#username').innerText = user['username']
-//         document.querySelector('#email').innerText = user['email']
-
-//         document.querySelector('#korisnicko_ime').value = user['username']
-//         document.querySelector('#edit_email').value = user['email']
-        
-     
-//     }
-//     populateUserData()
-// }
-// else{
-//     window.location.href = "index.html"
-// }
+if(session_id!== ""){
+}
+else{
+    window.location.href = "index.html"
+}
 
 
 

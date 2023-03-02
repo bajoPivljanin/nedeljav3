@@ -146,7 +146,6 @@ async function getAllPosts() {
                                                                             ${comments_html}
                                                                         </div>
                                                                     </div>` + html;
-        console.log(document.querySelector('#allPostsWrapper').innerHTML)
         }
         getPostUser()
     })
