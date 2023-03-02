@@ -27,9 +27,6 @@ body{
 .loadScreen img {
     zoom:.8;
 }
-
-
-
 h1{
     text-align: center;
     margin-bottom: 100px;
@@ -177,7 +174,7 @@ form ul li{
     transition: 0.3s;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-right:2px solid #6b6a6a;
+    border-right:1px solid #6b6a6a;
     margin-right: -4px;
 }
 #allPostsWrapper .single-post .post-actions div button.like-btn:hover{
