@@ -146,7 +146,7 @@ async function getAllPosts() {
                                                                             ${comments_html}
                                                                         </div>
                                                                     </div>` + html;
-        
+            console.log('alo')
         }
         getPostUser()
     })
