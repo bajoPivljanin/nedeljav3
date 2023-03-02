@@ -52,7 +52,7 @@ class Post {
         let data = await response.json()
         let users = data.user_id;
         console.log(typeof users)
-        if(users.includes(user_id))
+        if(users.substring(user_id))
         {
             console.log("yes")
             return {
@@ -65,7 +65,7 @@ class Post {
             console.log("no")
             return {
                 likes: likes+1,
-                like_id: users + user_id
+                like_id: users + ' ' +user_id
             }
         }
     }
