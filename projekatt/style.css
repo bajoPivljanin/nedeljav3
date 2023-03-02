@@ -175,7 +175,7 @@ form ul li{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-right:1px solid #6b6a6a;
-    margin-right: -4px;
+    margin-right: -4.5px;
 }
 #allPostsWrapper .single-post .post-actions div button.like-btn:hover{
     background-color: #4c5275;
