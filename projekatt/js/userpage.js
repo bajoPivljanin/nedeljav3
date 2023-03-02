@@ -53,7 +53,7 @@ async function getUsersPosts(){
                                                                               <div class="post-actions">
                                                                                   <p><b>Autor:</b> ${user.username}</p>
                                                                                   <div>
-                                                                                      <button onclick="likePost(this)" class="likePostJS like-btn" ${answer}><span>${post.likes}</span></button>
+                                                                                      <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span>${post.likes}</span></button>
                                                                                       <button onclick="commentPost(this)" class="comment-btn">Comments</button>
                                                                                   </div>
                                                                               </div>

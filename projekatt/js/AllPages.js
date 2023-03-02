@@ -39,18 +39,7 @@ const removeMyPost = btn => {
     let post = new Post()
     post.delete(post_id) 
 }
-const likePost = btn => {
-    let main_post_el = btn.closest('.single-post')
-    let post_id = btn.closest('.single-post').getAttribute('data-post_id')
-    let number_of_likes = parseInt(btn.querySelector('span').innerText)
 
-    btn.querySelector('span').innerText = number_of_likes + 1
-    btn.setAttribute('disabled','true')
-
-    let post = new Post()
-    post.like(post_id,number_of_likes,session_id)
-
-}
 const commentPost = btn => {
     let main_post_el = btn.closest('.single-post')
     let box = main_post_el.querySelector('.post-comments')
@@ -70,6 +59,36 @@ const commentPost = btn => {
 
          
 }
+const likeDislike = btn =>{
+    console.log(btn.classList)
+    if(btn.classList.contains('likedPost'))
+    {
+        let post_id = btn.closest('.single-post').getAttribute('data-post_id')
+        let number_of_likes = parseInt(btn.querySelector('span').innerText)
+
+        btn.querySelector('span').innerText = number_of_likes - 1
+
+        let post = new Post()
+        post.dislike(post_id,number_of_likes,session_id)
+        btn.classList.remove('likedPost');
+    }
+    else
+    {
+        let post_id = btn.closest('.single-post').getAttribute('data-post_id')
+        let number_of_likes = parseInt(btn.querySelector('span').innerText)
+
+        btn.querySelector('span').innerText = number_of_likes + 1
+
+        let post = new Post()
+        post.like(post_id,number_of_likes,session_id)
+        btn.classList.add('likedPost');
+    }
+
+    
+}
+
+
+
 
 //Search bar nestaje
 const searchBar = document.querySelector(".navsearch");

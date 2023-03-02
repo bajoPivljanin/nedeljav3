@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.likedPost{
+    background-color: rgb(242, 116, 116) !important;
+}
 body{
     font-family: sans-serif;
     /*padding: 50px;*/

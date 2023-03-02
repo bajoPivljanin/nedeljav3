@@ -155,16 +155,12 @@ class User {
         let response = await fetch(api_url)
         let data = await response.json()
         let users = data.like_id;
-        console.log(users)
-        console.log(user_id)
         if(users.includes(user_id))
         {
-            console.log('true')
-            return "disabled"; 
+            return "likedPost"; 
         } 
         else
         {
-            console.log('false')
             return "";
         }
     }
