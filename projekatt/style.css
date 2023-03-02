@@ -157,6 +157,10 @@ form ul li{
     font-weight: bold;
     background-color: #424868;
     transition: 0.3s;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-right:2px solid #6b6a6a;
+    margin-right: -4px;
 }
 #allPostsWrapper .single-post .post-actions div button.like-btn:hover{
     background-color: #4c5275;
@@ -170,6 +174,8 @@ form ul li{
     font-weight: bold;
     background-color: #424868;
     transition: 0.3s;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 #allPostsWrapper .single-post .post-actions div button.comment-btn:hover{
     background-color: #4c5275;
