@@ -374,9 +374,11 @@ form ul li{
   .remove-btn{
     background-color: #424868;
     border-radius: 15px;
+    border: 2px solid transparent;
+    transition: all .1s;
   }
   .remove-btn:hover{
-    border-color: red;
+    border: 2px solid red;
   }
   .custom-modal input{
     background-color: transparent;
