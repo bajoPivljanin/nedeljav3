@@ -78,7 +78,7 @@ async function getUsersPosts(){
                                                                               <div class="post-actions">
                                                                                   <p><b>Autor:</b> ${user.username}</p>
                                                                                   <div>
-                                                                                      <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span>Likes</button>
+                                                                                      <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span></button>
                                                                                       <button onclick="commentPost(this)" class="comment-btn">Comments</button>
                                                                                   </div>
                                                                               </div>
@@ -91,7 +91,7 @@ async function getUsersPosts(){
                                                                                   ${comments_html}
                                                                               </div>
                                                                           </div>` + html
-          
+          /*Likes*/ 
       }
       getPostUser()
   })
