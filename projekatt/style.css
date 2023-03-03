@@ -307,14 +307,13 @@ form ul li{
     top: 52px;
     background-color: #181c2f;
     margin:4px, 4px;
-    padding:4px;
     width: 380px;
     height: 260px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: justify;
     /*transform: translateY(-320px);*/
-    border: 2px solid #424868;
+    border: 1px solid #424868;
     border-bottom-left-radius: 15px;
     z-index: 99;
     max-height: 0px;
