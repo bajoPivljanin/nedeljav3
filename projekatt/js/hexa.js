@@ -69,6 +69,9 @@ document.querySelector('#postForm').addEventListener('submit', e =>{
         if(session_id === post.user_id){
             delete_post_html = '<button class="remove-btn" onclick="removeMyPost(this)"><i class="fa-regular fa-x"></i></button>'
         }
+        let comments = new Comment()
+            comments = await comments.get(post.id)
+
 
         document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
                                                                     <div class="post-content">${post.content}</div>
@@ -77,7 +80,7 @@ document.querySelector('#postForm').addEventListener('submit', e =>{
                                                                         <p><b><img src= "img/profile2.jpg" width="4%" id="posttimg"></b> ${current_user.username}</p>
                                                                         <div>
                                                                             <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span></button>
-                                                                            <button onclick="commentPost(this)" class="comment-btn">Comments</button>
+                                                                            <button onclick="commentPost(this)" class="comment-btn"><span id="cspan">${comments.length}</span></button>
                                                                             ${delete_post_html}
                                                                         </div>
                                                                     </div>

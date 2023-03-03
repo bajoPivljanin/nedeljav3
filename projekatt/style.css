@@ -155,12 +155,14 @@ form ul li{
     padding: 15px;
     margin-top: 15px;
     color: white;
+    border-radius: 10px;
 }
 #allPostsWrapper .single-post .post-content {
     padding-bottom: 10px;
     border-bottom: 1px solid white ;
     margin-bottom: 10px;
     font-size: 22px;
+    word-break: break-all;
 }
 #allPostsWrapper .single-post .post-actions{
     display: flex;
@@ -476,10 +478,11 @@ form ul li{
   }
   #posttimg{
     border-radius: 100%;
-    margin-right: 5px;
+    margin-right: 4px;
+    width: 28px;
   }
   .post-actions p{
-    width: 50%;
+    width: 60%;
   }
 .divimg{
     position: absolute;
@@ -512,7 +515,7 @@ form ul li{
     transform:translateY(-50px);
     transition: transform .2s;
 }
-/*.left-side{
+/*.popup-prof{
    width: 16%;
    position: absolute;
    z-index: 99;
@@ -526,7 +529,40 @@ form ul li{
    overflow-x: hidden;
    opacity: 1;
    transform: translateY(-450px);
-}*/
+   margin-bottom: 20px;
+   border-radius: 15px;
+   background-color: #181c2f;
+   border-radius: 15px;
+}
+
+.popup-prof #email{
+    color: #6b6a6a;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  .popup-prof #username{
+      font-size: 20px;
+  }
+  .popup-prof button{
+      color: white;
+      padding: 5px 10px;
+      background-color: transparent;
+      border: 2px solid #424868;
+      transition: 0.2s;
+      border-radius: 5px;
+  }
+  .popup-prof button:hover{
+      background-color: #424868;
+  }
+  .popup-prof p
+  {
+    margin-top: 5px;
+  }
+  .popup-prof img.profile{
+    border: 2px solid hsl(0, 0%, 18.82%);
+    border-radius: 100%;
+    width: 20%;
+  }*/
 
 .left-side{
     background-color: #181c2f;
