@@ -49,14 +49,14 @@ class UserSearch {
       if(this.searchBtn.ariaPressed=="false")
       {
         this.search(query)
-        this.resultContainer.style.opacity='1';
+        this.resultContainer.style.transform='translateY(0px)';
         this.searchBtn.ariaPressed="true";
       }
     })
     this.searchInput.addEventListener('keyup', () => {
       const query = this.searchInput.value
       this.search(query)
-      this.resultContainer.style.opacity='1';
+      this.resultContainer.style.transform='translateY(0px)';
     })
   }
   addNames(userId){

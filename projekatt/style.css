@@ -312,7 +312,7 @@ form ul li{
     overflow-x: hidden;
     overflow-y: auto;
     text-align: justify;
-    opacity: 0;
+    transform: translateY(-320px);
     border: 2px solid #424868;
     border-bottom-left-radius: 15px;
     z-index: 99;
@@ -458,4 +458,55 @@ form ul li{
   }
   .post-actions p{
     width: 50%;
+  }
+
+  @media only  screen and (max-width: 425px)
+  {
+    /*Projektna nedelja tekst*/
+    .navsearch h2{
+       display: none;
+    }
+    .navsearch input {
+        width: 80%;
+    }
+    #userneki{
+        opacity: 0;
+        left: 5%;
+    }
+    .container{
+        width: 100%;
+        
+    }
+    .inner-container img.profile{
+        width: 20%;
+        float: left;
+        margin-right: 30px;
+    }
+    .left-side p
+    {
+      margin-top: 5px;
+    }
+    .left-side{
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+    #postForm button{
+        width: 30%;
+    }
+    #postForm{
+        height: 100px;
+    }
+    .right-side{
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    #posttimg{
+        width: 35%;
+    }
+    #allPostsWrapper .single-post .post-actions div button.like-btn{
+        
+    }
+    .post-actions p{
+        width:120px;
+    }
   }
