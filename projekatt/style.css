@@ -467,6 +467,7 @@ form ul li{
     top: 5px;
     right: 60px;
     float: right;
+    width:100%;
 }
   @media only  screen and (max-width: 425px)
   {
