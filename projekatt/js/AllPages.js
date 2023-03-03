@@ -103,3 +103,5 @@ document.addEventListener("click", function(event) {
     document.querySelector('#aa').ariaPressed="false";
   }
 });
+
+document.querySelector('#allPostsWrapper').innerHTML
