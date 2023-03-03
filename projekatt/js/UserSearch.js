@@ -56,7 +56,7 @@ class UserSearch {
     this.searchInput.addEventListener('keyup', () => {
       const query = this.searchInput.value
       this.search(query)
-      this.resultContainer.style.transform='260px';
+      this.resultContainer.style.maxHeight='260px';
     })
   }
   addNames(userId){
