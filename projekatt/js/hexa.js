@@ -158,4 +158,3 @@ async function getAllPosts() {
 }
 
 getAllPosts()
-

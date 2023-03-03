@@ -411,6 +411,7 @@ form ul li{
       background-color: transparent;
       border: 2px solid #424868;
       transition: 0.2s;
+      border-radius: 5px;
   }
   .left-side button:hover{
       background-color: #424868;
@@ -481,7 +482,7 @@ form ul li{
   }
 .divimg{
     position: absolute;
-    top: 2px;
+    top: 10px;
     right: 60px;
     float: right;
     width:1.85%;
@@ -510,7 +511,25 @@ form ul li{
     transform:translateY(-50px);
     transition: transform .2s;
 }
-
+.left-side{
+   width: 16%;
+   position: absolute;
+   z-index: 99;
+   background-color: #181c2f;
+   right: 3.5%;
+   top: 5.7%;
+   border: 1px solid #424868;
+   border-top: 1px solid #181c2f;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   opacity: 0;
+   overflow-x: hidden;
+}
+#logout{
+    float: right;
+    padding: 5px 30px;
+    
+}
   @media only screen and (max-width: 425px)
   {
     /*Projektna nedelja tekst*/

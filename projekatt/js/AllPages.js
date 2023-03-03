@@ -108,3 +108,15 @@ document.addEventListener("click", function(event) {
 });
 
 document.querySelector('#allPostsWrapper').innerHTML
+
+document.querySelector('.navimg').addEventListener('click',()=>{
+    let popup=document.querySelector('.left-side');
+
+    if(popup.style.opacity=='1')
+    {
+        popup.style.opacity='0';
+    }
+    else{
+        popup.style.opacity='1';
+    }
+});
