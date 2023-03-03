@@ -35,11 +35,12 @@ var myData = JSON.parse(decodeURIComponent(dataParam));
 //     getUsersPosts();
 // })
 
-
+getUsersPosts();
 
 async function getUsersPosts(){
   let all_posts = new Post()
-  all_posts = await all_posts.getUserPost(myData.userId)
+  all_posts = await all_posts.getUserPost(session_id)
+  console.log('aaaa')
   all_posts.forEach(post => {
       async function getPostUser() {
          
