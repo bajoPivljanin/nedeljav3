@@ -112,11 +112,11 @@ document.querySelector('#allPostsWrapper').innerHTML
 document.querySelector('.navimg').addEventListener('click',()=>{
     let popup=document.querySelector('.left-side');
 
-    if(popup.style.opacity=='1')
+    if(popup.style.transform=='translateY(0px)')
     {
-        popup.style.opacity='0';
+        popup.style.transform='translateY(-450px)';
     }
     else{
-        popup.style.opacity='1';
+        popup.style.transform='translateY(0px)';
     }
 });

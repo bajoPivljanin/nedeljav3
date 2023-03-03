@@ -522,8 +522,9 @@ form ul li{
    border-top: 1px solid #181c2f;
    border-bottom-left-radius: 15px;
    border-bottom-right-radius: 15px;
-   opacity: 0;
    overflow-x: hidden;
+   opacity: 1;
+   transform: translateY(-450px);
 }
 #logout{
     float: right;
