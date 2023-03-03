@@ -60,6 +60,11 @@ async function getUsersPosts(){
               })
           } 
           let html =  document.querySelector('#allPostsWrapper').innerHTML
+          let delete_post_html = ''
+            
+            if(session_id === post.user_id){
+                delete_post_html = '<button class="remove-btn" onclick="removeMyPost(this)"><i class="fa-regular fa-x"></i></button>'
+            }
           document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
                                                                               <div class="post-content">${post.content}</div>
                                                                               
@@ -68,7 +73,8 @@ async function getUsersPosts(){
                                                                                   <div>
                                                                                       <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span>${post.likes} Likes</span></button>
                                                                                       <button onclick="commentPost(this)" class="comment-btn">Comments ${comments.length}</button>
-                                                                                  </div>
+                                                                                    ${delete_post_html}
+                                                                                    </div>
                                                                               </div>
                                                                           
                                                                               <div class="post-comments">
