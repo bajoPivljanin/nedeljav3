@@ -109,7 +109,7 @@ document.addEventListener("click", function(event) {
 
 document.querySelector('#allPostsWrapper').innerHTML
 
-document.querySelector('.navimg').addEventListener('click',()=>{
+/*document.querySelector('.navimg').addEventListener('click',()=>{
     let popup=document.querySelector('.left-side');
 
     if(popup.style.transform=='translateY(0px)')
@@ -119,4 +119,4 @@ document.querySelector('.navimg').addEventListener('click',()=>{
     else{
         popup.style.transform='translateY(0px)';
     }
-});
+});*/

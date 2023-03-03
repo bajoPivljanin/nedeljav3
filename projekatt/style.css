@@ -120,6 +120,7 @@ form ul li{
 }
 .inner-container .left-side{
     text-align: center;
+    opacity: 1;
 }
 .inner-container img.profile {
     width: 70%;
@@ -511,7 +512,7 @@ form ul li{
     transform:translateY(-50px);
     transition: transform .2s;
 }
-.left-side{
+/*.left-side{
    width: 16%;
    position: absolute;
    z-index: 99;
@@ -525,12 +526,13 @@ form ul li{
    overflow-x: hidden;
    opacity: 1;
    transform: translateY(-450px);
+}*/
+
+.left-side{
+    background-color: #181c2f;
+    border-radius: 15px;
 }
-#logout{
-    float: right;
-    padding: 5px 30px;
-    
-}
+
   @media only screen and (max-width: 425px)
   {
     /*Projektna nedelja tekst*/
