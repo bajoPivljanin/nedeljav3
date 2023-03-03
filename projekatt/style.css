@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .likedPost{
-    background-color: rgb(242, 116, 116) !important;
+    color: red !important;
 }
 body{
     font-family: sans-serif;
@@ -167,24 +167,29 @@ form ul li{
     color: grey;
 }
 #allPostsWrapper .single-post .post-actions div button.like-btn{
-    background-image: url(img/like.png);
-    padding: 5px 15px 5px 40px;
+    /*background-image: url(img/like.png);*/
+    background-color: #181c2f;
     background-repeat: no-repeat;
     background-position: 10px;
     border: 0;
     font-weight: bold;
-    background-color: #424868;
     transition: 0.3s;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-right:2px solid #6b6a6a;
-    margin-right: -5px;
     border-right:1px solid #6b6a6a;
     margin-right: -4.5px;
+    color: #787878;
 
 }
+.post-actions span::before{
+    font-family: "Font Awesome 5 Free"; 
+	font-weight: 200;
+    margin-right: 5px;
+    content: "\f004";
+    font-size: 20px;
+}
 #allPostsWrapper .single-post .post-actions div button.like-btn:hover{
-    background-color: #4c5275;
+    color: #616161;
 }
 #allPostsWrapper .single-post .post-actions div button.comment-btn{
     background-image: url(img/comment.png);
