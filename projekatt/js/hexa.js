@@ -129,7 +129,6 @@ async function getAllPosts() {
                 line = `<button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count">${post.likes}</div><div class="num2Count">${post.likes}</div></div></button>`
             else
             {
-                console.log('aaaa')
                 line = `<button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count" style="transform: translateY(50px);">${post.likes-1}</div><div class="num2Count" style="transform: translateY(0px);">${post.likes}</div></div></button>`
             }
             document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">

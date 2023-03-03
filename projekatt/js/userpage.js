@@ -46,26 +46,33 @@ async function getUsersPosts(){
                 comments_html += `<div class="single-comment"><span style = "color:gray" id="usernamecom">${comment.username}</span>  ${comment.content}</div>`
               })
           } 
-          let html =  document.querySelector('#allPostsWrapper').innerHTML
-          document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
-                                                                              <div class="post-content">${post.content}</div>
-                                                                              
-                                                                              <div class="post-actions">
-                                                                                  <p><b>Autor:</b> ${user.username}</p>
-                                                                                  <div>
-                                                                                      <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count">${post.likes}</div><div class="num2Count">${post.likes}</div></div></button>
-                                                                                      <button onclick="commentPost(this)" class="comment-btn">${comments.length}</button>
-                                                                                  </div>
-                                                                              </div>
-                                                                          
-                                                                              <div class="post-comments">
-                                                                                  <form>
-                                                                                      <input type="text" placeholder="Napisi komentar...">
-                                                                                      <button onclick="commentPostSubmit(event)">Comment</button>
-                                                                                  </form>
-                                                                                  ${comments_html}
-                                                                              </div>
-                                                                          </div>` + html
+        let line
+        if(answer =="")
+            line = `<button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count">${post.likes}</div><div class="num2Count">${post.likes}</div></div></button>`
+        else
+        {
+            line = `<button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count" style="transform: translateY(50px);">${post.likes-1}</div><div class="num2Count" style="transform: translateY(0px);">${post.likes}</div></div></button>`
+        }
+        document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
+                                                                    <div class="post-content">${post.content}</div>
+                                                                    
+                                                                    <div class="post-actions">
+                                                                        <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b> ${user.username}</p>
+                                                                        <div>
+                                                                            ${line}
+                                                                            <button onclick="commentPost(this)" class="comment-btn"><span id="cspan">${comments.length}</span></button>
+                                                                            ${delete_post_html}
+                                                                        </div>
+                                                                    </div>
+                                                                
+                                                                    <div class="post-comments">
+                                                                        <form>
+                                                                            <input type="text" placeholder="Napisi komentar...">
+                                                                            <button onclick="commentPostSubmit(event)">Comment</button>
+                                                                        </form>
+                                                                        ${comments_html}
+                                                                    </div>
+                                                                </div>` + html;
           /*Likes*/ 
       }
       getPostUser()
