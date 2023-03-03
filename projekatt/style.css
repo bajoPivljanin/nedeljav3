@@ -178,6 +178,8 @@ form ul li{
     border-bottom-left-radius: 15px;
     margin-right: 8px;
     color: #787878;
+    display: inline-flex;
+    align-items: center
 }
 .post-actions span::before{
     font-family: "Font Awesome 5 Free"; 
@@ -201,6 +203,10 @@ form ul li{
     border-bottom-right-radius: 15px;
     color: #787878;
     margin-right: 10px;
+}
+.post-actions #cspan{
+    display: inline-flex;
+    align-items: center
 }
 .post-actions #cspan::before{
     font-family: "Font Awesome 5 Free"; 
@@ -484,6 +490,27 @@ form ul li{
 .divimg img{
     border-radius: 100%;
 }
+.numCount
+{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    justify-content: end;
+    align-items: center;
+}
+.num1Count
+{
+    display: inline-block;
+    transition: transform .2s;
+}
+.num2Count
+{
+    position: absolute;
+    display: inline-block;
+    transform:translateY(-50px);
+    transition: transform .2s;
+}
+
   @media only screen and (max-width: 425px)
   {
     /*Projektna nedelja tekst*/

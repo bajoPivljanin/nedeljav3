@@ -60,28 +60,31 @@ const commentPost = btn => {
          
 }
 const likeDislike = btn =>{
-    console.log(btn.classList)
     if(btn.classList.contains('likedPost'))
     {
         let post_id = btn.closest('.single-post').getAttribute('data-post_id')
-        let number_of_likes = parseInt(btn.querySelector('span').innerText)
+        let number_of_likes = parseInt(btn.querySelector('.num2Count').innerText)
 
-        btn.querySelector('span').innerText = number_of_likes - 1+ " "
+        btn.querySelector('.num2Count').innerText = number_of_likes - 1+ " "
 
         let post = new Post()
         post.dislike(post_id,number_of_likes,session_id)
         btn.classList.remove('likedPost');
+        btn.querySelector('.num1Count').style.transform="translateY(0px)";
+        btn.querySelector('.num2Count').style.transform="translateY(-50px)";
     }
     else
     {
         let post_id = btn.closest('.single-post').getAttribute('data-post_id')
-        let number_of_likes = parseInt(btn.querySelector('span').innerText)
+        let number_of_likes = parseInt(btn.querySelector('.num2Count').innerText)
 
-        btn.querySelector('span').innerText = number_of_likes + 1 + " "
+        btn.querySelector('.num2Count').innerText = number_of_likes + 1 + " "
 
         let post = new Post()
         post.like(post_id,number_of_likes,session_id)
         btn.classList.add('likedPost');
+        btn.querySelector('.num1Count').style.transform="translateY(50px)";
+        btn.querySelector('.num2Count').style.transform="translateY(0px)";
     }
 
     

@@ -132,7 +132,7 @@ async function getAllPosts() {
                                                                         <div class="post-actions">
                                                                             <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b> ${user.username}</p>
                                                                             <div>
-                                                                                <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span>${post.likes}</span></button>
+                                                                                <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count">${post.likes}</div><div class="num2Count">${post.likes}</div></div></button>
                                                                                 <button onclick="commentPost(this)" class="comment-btn"><span id="cspan">${comments.length}</span></button>
                                                                                 ${delete_post_html}
                                                                             </div>

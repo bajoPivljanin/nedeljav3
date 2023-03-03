@@ -71,8 +71,8 @@ async function getUsersPosts(){
                                                                               <div class="post-actions">
                                                                                   <p><b>Autor:</b> ${user.username}</p>
                                                                                   <div>
-                                                                                      <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span>${post.likes} Likes</span></button>
-                                                                                      <button onclick="commentPost(this)" class="comment-btn">Comments ${comments.length}</button>
+                                                                                      <button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count">${post.likes}</div><div class="num2Count">${post.likes}</div></div></button>
+                                                                                      <button onclick="commentPost(this)" class="comment-btn">${comments.length}</button>
                                                                                     ${delete_post_html}
                                                                                     </div>
                                                                               </div>
