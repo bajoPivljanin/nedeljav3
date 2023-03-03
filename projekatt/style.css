@@ -274,6 +274,7 @@ form ul li{
   border-bottom: 1px #424868 solid;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  z-index: 100;
 }
 .navsearch button{
     background-color: hsl(0, 0%, 18.82%);
@@ -302,7 +303,7 @@ form ul li{
 
 #userneki{
     position: absolute;
-    left: 38.5%;
+    left: 38.7%;
     top: 52px;
     background-color: #181c2f;
     margin:4px, 4px;
@@ -312,10 +313,13 @@ form ul li{
     overflow-x: hidden;
     overflow-y: auto;
     text-align: justify;
-    transform: translateY(-320px);
+    /*transform: translateY(-320px);*/
     border: 2px solid #424868;
     border-bottom-left-radius: 15px;
     z-index: 99;
+    max-height: 0px;
+    transition: all .3s;
+    border-top: #181c2f;
 }
 #userneki h4{
     color: white;

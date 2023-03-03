@@ -99,7 +99,7 @@ document.addEventListener("click", function(event) {
   if (!searchBar.contains(event.target) && !list.contains(event.target)) {
     // If the target is not inside the search bar, hide the search bar
     list.innerHTML ="";
-    list.style.transform="translateY(-320px)";
+    list.style.maxHeight="0px";
     document.querySelector('#aa').ariaPressed="false";
   }
 });
