@@ -464,10 +464,14 @@ form ul li{
   }
 .divimg{
     position: absolute;
-    top: 5px;
+    top: 9px;
     right: 60px;
     float: right;
-    width:4%;
+    width:1.9%;
+    cursor: pointer;
+}
+.divimg img{
+    border-radius: 100%;
 }
   @media only  screen and (max-width: 425px)
   {
