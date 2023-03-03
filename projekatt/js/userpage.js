@@ -71,4 +71,3 @@ async function getUsersPosts(){
       getPostUser()
   })
 }
-
