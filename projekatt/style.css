@@ -101,6 +101,7 @@ form ul li{
     right: 0;
     width: 100%;
     border-radius: 20px;
+    z-index: 1000;
 }
 .custom-modal button#closeModal{
     height: 20px;
@@ -109,7 +110,7 @@ form ul li{
     background-color: transparent;
     border: 0;
     font-size: 25px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     position: absolute;
     right: 30px;
     top: 30px;
@@ -515,7 +516,7 @@ form ul li{
     transform:translateY(-50px);
     transition: transform .2s;
 }
-/*.popup-prof{
+.popup-prof{
    width: 16%;
    position: absolute;
    z-index: 99;
@@ -524,23 +525,21 @@ form ul li{
    top: 5.7%;
    border: 1px solid #424868;
    border-top: 1px solid #181c2f;
-   border-bottom-left-radius: 15px;
-   border-bottom-right-radius: 15px;
    overflow-x: hidden;
    opacity: 1;
    transform: translateY(-450px);
    margin-bottom: 20px;
-   border-radius: 15px;
+   border-radius: 1px !important;
    background-color: #181c2f;
    border-radius: 15px;
 }
 
-.popup-prof #email{
+.popup-prof #email2{
     color: #6b6a6a;
     margin-top: -10px;
     margin-bottom: 20px;
   }
-  .popup-prof #username{
+  .popup-prof #username2{
       font-size: 20px;
   }
   .popup-prof button{
@@ -554,15 +553,14 @@ form ul li{
   .popup-prof button:hover{
       background-color: #424868;
   }
+  .popup-prof #logout2{
+    padding: 5px 32px;
+  }
   .popup-prof p
   {
     margin-top: 5px;
   }
-  .popup-prof img.profile{
-    border: 2px solid hsl(0, 0%, 18.82%);
-    border-radius: 100%;
-    width: 20%;
-  }*/
+
 
 .left-side{
     background-color: #181c2f;

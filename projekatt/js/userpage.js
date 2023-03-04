@@ -57,7 +57,7 @@ async function getUsersPosts(){
                                                                     <div class="post-content">${post.content}</div>
                                                                     
                                                                     <div class="post-actions">
-                                                                        <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b> ${user.username}</p>
+                                                                        <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b>${user.username}</p>
                                                                         <div>
                                                                             ${line}
                                                                             <button onclick="commentPost(this)" class="comment-btn"><span id="cspan">${comments.length}</span></button>
