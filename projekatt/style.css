@@ -295,7 +295,8 @@ form ul li{
   border-bottom: 1px #424868 solid;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  z-index: 100;
+  z-index: 1000;
+  position: relative;
 }
 .navsearch button{
     background-color: hsl(0, 0%, 18.82%);
