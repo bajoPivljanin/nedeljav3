@@ -2,6 +2,16 @@ let session = new Session()
 let session_id = session.getSession()
 
 if(session_id!== ""){
+    async function populateUserData(){
+        let user = new User()
+        user = await user.get(session_id)
+        
+        document.querySelector('#username').innerText = user['username']
+        document.querySelector('#email').innerText = user['email']
+        
+     
+    }
+    populateUserData()
 }
 else{
     window.location.href = "index.html"
@@ -18,8 +28,8 @@ var myData = JSON.parse(decodeURIComponent(dataParam));
 
 window.addEventListener('load',()=>{
     
-    document.querySelector('#username').innerText = myData.Username;
-    document.querySelector('#email').innerText = myData.email;
+    document.querySelector('#username2').innerText = myData.Username;
+    document.querySelector('#email2').innerText = myData.email;
     getUsersPosts();
 })
 
@@ -61,7 +71,6 @@ async function getUsersPosts(){
                                                                         <div>
                                                                             ${line}
                                                                             <button onclick="commentPost(this)" class="comment-btn"><span id="cspan">${comments.length}</span></button>
-                                                                            ${delete_post_html}
                                                                         </div>
                                                                     </div>
                                                                 
@@ -72,7 +81,7 @@ async function getUsersPosts(){
                                                                         </form>
                                                                         ${comments_html}
                                                                     </div>
-                                                                </div>` + html;
+                                                                </div>` ;
           /*Likes*/ 
       }
       getPostUser()
