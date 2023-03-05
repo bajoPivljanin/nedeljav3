@@ -6,8 +6,8 @@ if(session_id!== ""){
         let user = new User()
         user = await user.get(session_id)
         
-        document.querySelector('#username').innerText = user['username']
-        document.querySelector('#email').innerText = user['email']
+        document.querySelector('#username2').innerText = user['username']
+        document.querySelector('#email2').innerText = user['email']
 
         document.querySelector('#korisnicko_ime').value = user['username']
         document.querySelector('#edit_email').value = user['email']
