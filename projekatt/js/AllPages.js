@@ -96,6 +96,8 @@ const likeDislike = btn =>{
 //Search bar nestaje
 const searchBar = document.querySelector(".navsearch");
 let list = document.getElementById("userneki");
+let popupUser = document.querySelector(".popup-prof");
+let popupUserImg = document.querySelector(".navimg");
 // Add a click event listener to the document object
 document.addEventListener("click", function(event) {
   // Check if the target of the click event is inside the search bar
@@ -104,6 +106,10 @@ document.addEventListener("click", function(event) {
     list.innerHTML ="";
     list.style.maxHeight="0px";
     document.querySelector('#aa').ariaPressed="false";
+  }
+  if(!popupUserImg.contains(event.target) && !popupUser.contains(event.target))
+  {
+    popupUser.style.transform='translateY(-450px)';
   }
 });
 

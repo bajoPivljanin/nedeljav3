@@ -532,6 +532,7 @@ form ul li{
    border-radius: 1px !important;
    background-color: #181c2f;
    border-radius: 15px;
+   transition: all .2s;
 }
 
 .popup-prof #email2{
