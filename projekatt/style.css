@@ -590,6 +590,7 @@ form ul li{
 .left-side h4{
     font-weight: bold;
     font-size: 20px;
+    margin-bottom: 10px;
 }
   @media only screen and (max-width: 425px)
   {
