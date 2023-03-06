@@ -1,6 +1,10 @@
 let session = new Session()
 let session_id = session.getSession()
 
+function giveSession()
+{
+    return session_id
+}
 if(session_id!== ""){
     async function populateUserData(){
         let user = new User()
@@ -100,7 +104,12 @@ document.querySelector('#postForm').addEventListener('submit', e =>{
 
 async function getAllPosts() {
     let all_posts = new Post()
+    let topU = [];
+    //document.querySelectorAll('#userTop');
+    let topL = document.querySelector('#brlajkova');
+    let i =0;
     all_posts = await all_posts.getAllPosts()
+    console.log(all_posts)
 
     all_posts.forEach(post => {
         async function getPostUser() {
@@ -112,6 +121,11 @@ async function getAllPosts() {
             comments = await comments.get(post.id)
 
             let answer = await new User().likedPost(session_id,post.id);
+
+            
+
+
+            
 
             let comments_html = ''
             if(comments.length > 0){
@@ -158,6 +172,8 @@ async function getAllPosts() {
         }
         getPostUser()
     })
+    console.log(topU)
+    
 }
 
 getAllPosts()

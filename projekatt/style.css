@@ -562,14 +562,6 @@ form ul li{
   {
     margin-top: 5px;
   }
-  .left-side i
-  { 
-    font-size: 15px;
-    position: absolute;
-    left: 12px;
-    top: 19px;
-    color: #424868;
-  }
 .left-side{
     background-color: #181c2f;
     border-radius: 15px;
@@ -592,6 +584,26 @@ form ul li{
     font-size: 20px;
     margin-bottom: 10px;
 }
+.left-side i
+{ 
+  color: #424868;
+  position: absolute;
+  font-size: 15px;
+  left: 12px ;
+  top: 19px ;
+}
+.left-side #goldstar{
+  color: rgba(255, 217, 0, 0.904) !important;
+  position: relative;
+  left: 90px;
+  top:  0px;
+}
+.left-side #brlajkova{
+    position: relative;
+    left: 100px;
+    top:  1px;  
+}
+
   @media only screen and (max-width: 425px)
   {
     /*Projektna nedelja tekst*/
@@ -599,7 +611,12 @@ form ul li{
        display: none;
     }
     .navsearch input {
-        width: 80%;
+        width: 50%;
+    }
+    .navsearch .divimg img
+    {
+        width: 400%;
+        
     }
     #userneki{
         left: 5%;
@@ -632,10 +649,32 @@ form ul li{
         border-top-left-radius: 15px;
     }
     #posttimg{
-        width: 35%;
+        width: 15%;
     }
     .post-actions p{
-        width:120px;
+        width:220px;
+    }
+    .left-side img{
+        width: 13%;
+    }
+    .left-side #goldstar
+    {
+        left: 170px;
+    }
+    .left-side #brlajkova{
+        left: 180px;
+    }
+    .popup-prof
+    {
+        left: 160px;
+        width: 60%;
+    }
+    .popup-prof a .profile{
+        width: 25%;
+        margin-right: 20px;
+    }
+    .popup-prof #username{
+        padding-left: -40px;
     }
   }
 
