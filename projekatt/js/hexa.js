@@ -1,6 +1,10 @@
 let session = new Session()
 let session_id = session.getSession()
 
+function giveSession()
+{
+    return session_id
+}
 if(session_id!== ""){
     async function populateUserData(){
         let user = new User()

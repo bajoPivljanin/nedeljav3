@@ -1,6 +1,4 @@
-
-
-const commentPostSubmit = e => {
+async function commentPostSubmit (e) {
     e.preventDefault()
 
     let btn = e.target
@@ -13,10 +11,12 @@ const commentPostSubmit = e => {
 
     let comment_value = main_post_el.querySelector('input').value
     main_post_el.querySelector('input').value = ''
+    let name = await new User().get(session_id);
     if(isNaN(comment_value))
     {
-        main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment">${comment_value} </div>`
+        main_post_el.querySelector('.post-comments').innerHTML +=`<div class="single-comment"><span style="color:gray" id="usernamecom">${name.username}</span>${comment_value} </div>`
         Name();
+        main_post_el.querySelector('#cspan').innerText = parseInt(main_post_el.querySelector('#cspan').innerText)+1
     }
     async function Name(){
         let user = new User()
