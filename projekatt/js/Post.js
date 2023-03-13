@@ -120,4 +120,27 @@ class Post {
            //alert('Post je obrisan')
         })
     }
+    async getUserPostCount() {
+        let response = await fetch(this.api_url + '/posts');
+        let data = await response.json();
+        let postCount = {};
+        data.forEach(e => {
+            if (e.user_id in postCount) {
+                postCount[e.user_id]++;
+            } else {
+                postCount[e.user_id] = 1;
+            }
+        });
+        let userPostCount = [];
+        for (let userId in postCount) {
+            let userResponse = await fetch(this.api_url + '/users/' + userId);
+            let userData = await userResponse.json();
+            userPostCount.push({
+                username: userData.username,
+                postCount: postCount[userId]
+            });
+        }
+        return userPostCount;
+    }
+      
 }

@@ -108,9 +108,23 @@ async function getAllPosts() {
     //document.querySelectorAll('#userTop');
     let topL = document.querySelector('#brlajkova');
     let i =0;
-    all_posts = await all_posts.getAllPosts()
-    console.log(all_posts)
 
+    let posts = new Post();
+    let userPostCount = await posts.getUserPostCount();
+    // console.log(userPostCount);
+    let counted_user = ''
+    userPostCount.forEach(user => {
+    // console.log(`${user.username} ${user.postCount}`);
+        counted_user +=`<img src="img/profile2.jpg" alt=""><span id="userTop">${user.username}</span><!--<i class="fa-solid fa-star" id="goldstar"></i><span id="brlajkova">${user.postCount}</span>-->
+                        <br>`
+    });
+    document.querySelector('.left-wrapper').innerHTML+=`<div class="inner-container left-side">
+                                                            <h4><i class="fa-solid fa-star" id="bluestar"></i>Top 5 most liked users</h4>  
+                                                            ${counted_user}
+                                                        </div>   `
+
+
+    all_posts = await all_posts.getAllPosts()
     all_posts.forEach(post => {
         async function getPostUser() {
            
@@ -122,11 +136,7 @@ async function getAllPosts() {
 
             let answer = await new User().likedPost(session_id,post.id);
 
-            
-
-
-            
-
+              
             let comments_html = ''
             if(comments.length > 0){
                 comments.forEach(comment => {
@@ -172,7 +182,8 @@ async function getAllPosts() {
         }
         getPostUser()
     })
-    console.log(topU)
+
+
     
 }
 
