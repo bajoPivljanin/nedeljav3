@@ -225,3 +225,19 @@ button#closeModal{
     padding: 10px;
     margin-top: 10px;
 }
+
+h2
+{
+    text-align: center;
+    padding: 25px 0px;
+}
+#drmrezatekst{
+    color: #4d547a;
+}
+#naslovind{
+    margin-bottom: 30px;
+    margin-top: -10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    user-select: none;
+}
