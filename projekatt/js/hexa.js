@@ -119,7 +119,7 @@ async function getAllPosts() {
                         <br>`
     });
     document.querySelector('.left-wrapper').innerHTML+=`<div class="inner-container left-side">
-                                                            <h4><i class="fa-solid fa-star" id="bluestar"></i>Top 5 most liked users</h4>  
+                                                            <h4><i class="fa-solid fa-star" id="bluestar"></i>Top 5 most active users</h4>  
                                                             ${counted_user}
                                                         </div>   `
 
