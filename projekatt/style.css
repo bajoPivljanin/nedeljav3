@@ -325,11 +325,11 @@ form ul li{
 
 #userneki{
     position: absolute;
-    left: 38.7%;
+    left: 38.82%;
     top: 52px;
     background-color: #181c2f;
     margin:4px, 4px;
-    width: 380px;
+    width: 378px;
     height: 260px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -392,7 +392,7 @@ form ul li{
     border: 2px solid hsl(0, 0%, 18.82%);
   }
 #postForm button:hover{
-    opacity: 1;
+    background-color:#25293f;
 }
 #postContent{
   outline: none;
@@ -535,6 +535,7 @@ form ul li{
    background-color: #181c2f;
    border-radius: 15px;
    transition: all .2s;
+   opacity: 0;
 }
 
 .popup-prof #email2{
