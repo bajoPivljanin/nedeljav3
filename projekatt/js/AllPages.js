@@ -121,8 +121,10 @@ document.querySelector('.navimg').addEventListener('click',()=>{
     if(popup.style.transform=='translateY(0px)')
     {
         popup.style.transform='translateY(-450px)';
+        popup.style.opacity="0";
     }
     else{
         popup.style.transform='translateY(0px)';
+        popup.style.opacity="1";
     }
 });

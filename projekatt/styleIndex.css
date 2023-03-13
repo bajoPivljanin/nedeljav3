@@ -241,3 +241,16 @@ h2
     font-size: 60px;
     user-select: none;
 }
+button{
+    transition: .3s;
+}
+button:hover{
+    background-color: #282f3d;
+}
+#ulg{
+   margin-bottom: 12px;
+   color: grey;
+}
+#logint{
+    margin-bottom: -15px;
+}
