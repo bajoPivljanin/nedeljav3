@@ -107,7 +107,8 @@ form ul li{
 }
 .no-acc-register{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: -30px;
 }
 .no-acc-register button{
     padding: 15px;
@@ -236,7 +237,7 @@ h2
 }
 #naslovind{
     margin-bottom: 30px;
-    margin-top: -10px;
+    margin-top: -10px; 
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
     user-select: none;
