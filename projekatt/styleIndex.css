@@ -258,7 +258,7 @@ button:hover{
 @media only screen and (max-width: 425px)
 {
     #naslovind{
-        font-size: 50px;
+        font-size: 45px;
     }
     #drmr{
         font-size: 17px;
@@ -268,6 +268,7 @@ button:hover{
         border: none;
         width: 100%;
         padding: 20px;
+        background-color: black;
     }
     .main-wrapper input{
         border-radius: 20px;
@@ -278,7 +279,8 @@ button:hover{
         color: black;
         font-weight: bolder;
         border-radius: 20px;
-        padding:10px 100px;
+        padding:10px 40px;
+        width: 100%;
         margin-bottom: -30px;
     }
     .main-wrapper label{
@@ -292,7 +294,8 @@ button:hover{
         background-color: transparent;
         color: white;
         border-radius: 20px;
-        padding:10px 90px;
+        padding:10px 40px;
+        width: 88%;
     }
     #orspan
     {
