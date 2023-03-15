@@ -304,4 +304,8 @@ button:hover{
         text-align: center;
         color: gray;
     }
+    body{
+        box-shadow:none;
+        background-color: black;
+    }
 }
