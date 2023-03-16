@@ -5,26 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleIndex.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Grape+Nuts&family=Kanit&display=swap" rel="stylesheet">
+
     <title>Hexa</title>
 </head>
 <body>
-    <div class="logo">
+    <!-- <div class="logo">
         <img src="img/logo.png" alt="" srcset="">
-    </div>
-    <h1>Drustvena mreza namenjena hakerima</h1>
+    </div> -->
+    <!-- <h1 id="drmrezatekst">Drustvena mreza namenjena hakerima</h1> -->
+    <h1 id="naslovind">Projektna <span style="color: #4d547a;">nedelja</span></h1>
+     <h2 id="drmr">Drustvena mreza <span id="drmrezatekst"></span></h2>
 
     <div class="main-wrapper">
         <form id="loginForm" class="loginForm" >
-            <h2>Login</h2>
+            <h2 id="logint">Login</h2>
+            <p id="ulg">Uloguj se u svoj nalog</p>
 
             <div>
-                <label>Email:</label>
-                <input type="email" name="email" id="login_email" placeholder="example@email.com">
+                <label>Email:</label> 
+                <input type="email" name="email" id="login_email" placeholder="Email adress">
             </div>
 
             <div>
                 <label>Lozinka:</label>
-                <input type="password" name="lozinka" id="login_lozinka" placeholder="******">
+                <input type="password" name="lozinka" id="login_lozinka" placeholder="Password">
             </div>
             
             <div>
@@ -33,31 +38,32 @@
         </form>
     </div>
     <div class="main-wrapper registerContainer">
-        <button id="closeModal">X</button>
+        <button id="closeModal"></button>
         <form id="registrationForm">
             <h2>Registracija korisnika</h2>
+            <p id="rlg">Kreiraj novi nalog</p>
                 <div>
                     <label for="korisnicko_ime">Korisnicko ime: *</label>
-                    <input type="text" id="korisnicko_ime" name="korisnicko_ime" placeholder="example123">
+                    <input type="text" id="korisnicko_ime" name="korisnicko_ime" placeholder="Username">
                 </div>
 
                 <div>
                     <label for="email">Email adresa: *</label>
-                    <input type="text" id="email" name="register_email" placeholder="example@email.com">
+                    <input type="text" id="email" name="register_email" placeholder="Email adress">
                 </div>
     
                 <div>
                     <label for="lozinka">Lozinka: *</label>
-                    <input type="password" id="lozinka" name="register_lozinka" placeholder="******">
+                    <input type="password" id="lozinka" name="register_lozinka" placeholder="Password">
                 </div>
 
                 <div>
                     <label for="ponovi_lozinku">Ponovi lozinku: *</label>
-                    <input type="password" id="ponovi_lozinku" name="ponovi_lozinku" placeholder="******">
+                    <input type="password" id="ponovi_lozinku" name="ponovi_lozinku" placeholder="Confirm password">
                 </div>
 
                 <div>
-                    <button>Registruj se</button>
+                    <button style="margin-bottom: -60px;">Registruj se</button>
                 </div>
         </form>
     </div> 
@@ -70,7 +76,15 @@
     <script src="js/Session.js"></script>
     <script src="js/User.js"></script>
     <script src="js/app.js"></script>
-   
-    
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#drmrezatekst",{
+        strings: ["namenjena hakerima"],
+        typeSpeed:100,
+        backSpeed:100,
+        loop:true
+    });
+
+    </script>
 </body>
 </html>

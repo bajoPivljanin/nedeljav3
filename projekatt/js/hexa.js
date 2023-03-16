@@ -1,6 +1,10 @@
 let session = new Session()
 let session_id = session.getSession()
 
+function giveSession()
+{
+    return session_id
+}
 if(session_id!== ""){
     async function populateUserData(){
         let user = new User()
@@ -101,10 +105,29 @@ document.querySelector('#postForm').addEventListener('submit', e =>{
 
 async function getAllPosts() {
     let all_posts = new Post()
+    let topU = [];
+    //document.querySelectorAll('#userTop');
+    let topL = document.querySelector('#brlajkova');
+    let i =0;
+
+    let posts = new Post();
+    let userPostCount = await posts.getUserPostCount();
+    // console.log(userPostCount);
+    let counted_user = ''
+    userPostCount.forEach(user => {
+    // console.log(`${user.username} ${user.postCount}`);
+        counted_user +=`<img src="img/profile2.jpg" alt=""><span id="userTop">${user.username}</span><!--<i class="fa-solid fa-star" id="goldstar"></i><span id="brlajkova">${user.postCount}</span>-->
+                        <br>`
+    });
+    document.querySelector('.left-wrapper').innerHTML+=`<div class="inner-container left-side">
+                                                            <h4><i class="fa-solid fa-star" id="bluestar"></i>Top 5 most active users</h4>  
+                                                            ${counted_user}
+                                                        </div>   `
+
+
     all_posts = await all_posts.getAllPosts()
-    all_posts.sort(function(a,b){return b.likes - a.likes});
-    console.log(all_posts);
-    for (let post of all_posts) {
+
+    all_posts.forEach(post => {
         async function getPostUser() {
            
             let user = new User()
@@ -115,6 +138,7 @@ async function getAllPosts() {
 
             let answer = await new User().likedPost(session_id,post.id);
 
+              
             let comments_html = ''
             if(comments.length > 0){
                 comments.forEach(comment => {
@@ -158,66 +182,8 @@ async function getAllPosts() {
                                                                     </div>` ;
         
         }
-       await getPostUser()
-        
-    }
-    // all_posts.forEach(post => {
-        
-    //     async function getPostUser() {
-           
-    //         let user = new User()
-    //         user = await user.get(post.user_id)
-
-    //         let comments = new Comment()
-    //         comments = await comments.get(post.id)
-
-    //         let answer = await new User().likedPost(session_id,post.id);
-
-    //         let comments_html = ''
-    //         if(comments.length > 0){
-    //             comments.forEach(comment => {
-    //                 comments_html += `<div class="single-comment"><span style = "color:gray" id="usernamecom">${comment.username}</span>  ${comment.content}</div>`
-    //             })
-    //         } 
-           
-
-    //         let html =  document.querySelector('#allPostsWrapper').innerHTML;
-    //         let delete_post_html = ''
-            
-    //         if(session_id === post.user_id){
-    //             delete_post_html = '<button class="remove-btn" onclick="removeMyPost(this)"><i class="fa-regular fa-x"></i></button>'
-    //         }
-    //         let line
-    //         if(answer =="")
-    //             line = `<button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count">${post.likes}</div><div class="num2Count">${post.likes}</div></div></button>`
-    //         else
-    //         {
-    //             line = `<button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count" style="transform: translateY(50px);">${post.likes-1}</div><div class="num2Count" style="transform: translateY(0px);">${post.likes}</div></div></button>`
-    //         }
-    //         document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
-    //                                                                     <div class="post-content">${post.content}</div>
-                                                                        
-    //                                                                     <div class="post-actions">
-    //                                                                         <p><b><img src= "img/profile2.jpg" width="6%" id="posttimg"></b> ${user.username}</p>
-    //                                                                         <div>
-    //                                                                             ${line}
-    //                                                                             <button onclick="commentPost(this)" class="comment-btn"><span id="cspan">${comments.length}</span></button>
-    //                                                                             ${delete_post_html}
-    //                                                                         </div>
-    //                                                                     </div>
-                                                                    
-    //                                                                     <div class="post-comments">
-    //                                                                         <form>
-    //                                                                             <input type="text" placeholder="Napisi komentar...">
-    //                                                                             <button onclick="commentPostSubmit(event)">Comment</button>
-    //                                                                         </form>
-    //                                                                         ${comments_html}
-    //                                                                     </div>
-    //                                                                 </div>` + html;
-        
-    //     }
-    //     getPostUser()
-    // })
+        getPostUser()
+    })
 }
 
 getAllPosts()

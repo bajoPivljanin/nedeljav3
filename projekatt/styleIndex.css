@@ -107,7 +107,8 @@ form ul li{
 }
 .no-acc-register{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: -30px;
 }
 .no-acc-register button{
     padding: 15px;
@@ -224,4 +225,100 @@ button#closeModal{
     border: 1px dotted green;
     padding: 10px;
     margin-top: 10px;
+}
+
+h2
+{
+    text-align: center;
+    padding: 25px 0px;
+}
+#drmrezatekst{
+    color: #4d547a;
+}
+#naslovind{
+    margin-bottom: 30px;
+    margin-top: -10px; 
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    user-select: none;
+}
+button{
+    transition: .3s;
+}
+button:hover{
+    background-color: #282f3d;
+}
+#ulg{
+   margin-bottom: 12px;
+   color: grey;
+   text-align: center;
+}
+#logint{
+    margin-bottom: -15px;
+}
+#rlg{
+    margin-bottom: 12px;
+    margin-top: -30px;
+    color: grey;
+    text-align: center;
+}
+@media only screen and (max-width: 425px)
+{
+    #naslovind{
+        font-size: 45px;
+    }
+    #drmr{
+        font-size: 17px;
+        padding-top: 0px;
+    }
+    .main-wrapper{
+        border: none;
+        width: 100%;
+        padding: 20px;
+        background-color: black;
+    }
+    .main-wrapper input{
+        border-radius: 20px;
+        padding-left: 15px;
+    }
+    .main-wrapper button{
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        border-radius: 20px;
+        padding:10px 40px;
+        width: 100%;
+        margin-bottom: -30px;
+    }
+    .main-wrapper label{
+        display: none;
+    }
+    .no-acc-register p{
+        display: none;
+    }
+    .no-acc-register button{
+        margin-top: -100px;
+        background-color: transparent;
+        color: white;
+        border-radius: 20px;
+        padding:10px 40px;
+        width: 88%;
+    }
+    #orspan
+    {
+        margin-top: 25px;
+        margin-bottom: -35px;
+        text-align: center;
+        color: gray;
+    }
+    body{
+        box-shadow:none;
+        background-color: black;
+    }
+    #rlg{
+        margin-bottom: 12px;
+        margin-top: -30px;
+        color: grey;
+        text-align: center;
+    }
 }
