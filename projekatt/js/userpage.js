@@ -38,6 +38,8 @@ window.addEventListener('load',()=>{
 async function getUsersPosts(){
   let all_posts = new Post()
   all_posts = await all_posts.getUserPost(myData.userId)
+  all_posts.sort();
+  console.log(all_posts);
   all_posts.forEach(post => {
       async function getPostUser() {
          

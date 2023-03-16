@@ -74,7 +74,7 @@ class Post {
         let data = await response.json()
         return {
             likes: likes-1,
-            like_id: data.like_id.replace(user_id,"")
+            like_id: data.like_id.replace(user_id,'')
         }
     }
     async like(post_id, likes,user_id){
