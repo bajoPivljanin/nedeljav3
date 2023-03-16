@@ -739,15 +739,22 @@ footer{
     }
     footer{
         display: block;
-        background: red;
+        background-color: #181c2f;
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
         height: 50px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-top: 1px solid gray;
     } 
     #imgsmall{
-        width: 10%;
+        width: 8%;
+        border: 1px solid gray;
+        border-radius: 100%;
+        margin-left: 86%;
+        margin-top:6px;
     }
   }
 

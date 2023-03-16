@@ -133,23 +133,23 @@ document.querySelector('.divimg').addEventListener('click',()=>{
         popup.style.opacity="1";
     }
 });
-// document.querySelector('#imgsmall').addEventListener('click',()=>{
-//     let popup=document.querySelector('.popup-prof');
-
-//     if(popup.style.transform=='translateY(0px)')
-//     {
-//         popup.style.transform='translateY(-450px)';
-//         popup.style.opacity="0";
-//     }
-//     else{
-//         popup.style.transform='translateY(0px)';
-//         popup.style.opacity="1";
-//     }
-// });
 
 
+    // document.querySelector('#imgsmall').addEventListener('click',()=>{
+    //     let popup=document.querySelector('.popup-prof');
+    
+    //     if(popup.style.transform=='translateY(0px)')
+    //     {
+    //         popup.style.transform='translateY(-450px)';
+    //         popup.style.opacity="0";
+    //     }
+    //     else{
+    //         popup.style.transform='translateY(0px)';
+    //         popup.style.opacity="1";
+    //     }
+    // });
 
-
+    
 // var w = window.innerWidth;
 // if(w<=425)
 // {
