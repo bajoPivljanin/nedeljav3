@@ -75,6 +75,7 @@ document.querySelector('#postForm').addEventListener('submit', e =>{
         }
         let comments = new Comment()
             comments = await comments.get(post.id)
+        let line = `<button onclick="likeDislike(this);" class="likePostJS like-btn " ><span></span><div class="numCount"><div class="num1Count">${post.likes}</div><div class="num2Count">${post.likes}</div></div></button>`
 
 
         document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
@@ -83,7 +84,7 @@ document.querySelector('#postForm').addEventListener('submit', e =>{
                                                                     <div class="post-actions">
                                                                         <p><b><img src= "img/profile2.jpg" width="4%" id="posttimg"></b> ${current_user.username}</p>
                                                                         <div>
-                                                                            <button onclick="likePost(this)" class="likePostJS like-btn"><span>${post.likes}</span></button>
+                                                                            ${line}
                                                                             <button onclick="commentPost(this)" class="comment-btn"><span id="cspan">${comments.length}</span></button>
                                                                             ${delete_post_html}
                                                                         </div>
@@ -125,6 +126,7 @@ async function getAllPosts() {
 
 
     all_posts = await all_posts.getAllPosts()
+
     all_posts.forEach(post => {
         async function getPostUser() {
            
@@ -158,7 +160,7 @@ async function getAllPosts() {
             {
                 line = `<button onclick="likeDislike(this);" class="likePostJS like-btn ${answer}" ><span></span><div class="numCount"><div class="num1Count" style="transform: translateY(50px);">${post.likes-1}</div><div class="num2Count" style="transform: translateY(0px);">${post.likes}</div></div></button>`
             }
-            document.querySelector('#allPostsWrapper').innerHTML = `<div class="single-post" data-post_id="${post.id}">
+            document.querySelector('#allPostsWrapper').innerHTML = html + `<div class="single-post" data-post_id="${post.id}">
                                                                         <div class="post-content">${post.content}</div>
                                                                         
                                                                         <div class="post-actions">
@@ -177,14 +179,11 @@ async function getAllPosts() {
                                                                             </form>
                                                                             ${comments_html}
                                                                         </div>
-                                                                    </div>` + html;
+                                                                    </div>` ;
         
         }
         getPostUser()
     })
-
-
-    
 }
 
 getAllPosts()
