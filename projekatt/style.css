@@ -169,6 +169,7 @@ form ul li{
     display: flex;
     justify-content: space-between;
     color: grey;
+    margin-bottom: -17px;
 }
 #allPostsWrapper .single-post .post-actions div button.like-btn{
     /*background-image: url(img/like.png);*/
@@ -663,7 +664,10 @@ form ul li{
 footer{
     display: none;
 }
-
+.post-content h5{
+    margin-bottom: 0px;
+    font-family: sans-serif;
+}
 
   @media only screen and (max-width: 425px)
   {
