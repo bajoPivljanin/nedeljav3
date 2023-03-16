@@ -91,4 +91,6 @@ if(w<=425)
     console.log('cu')
     let div=document.querySelector('.main-wrapper');
     div.innerHTML+='<p id="orspan" style="display:block;">or</p>'
+
+   
 }

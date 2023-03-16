@@ -6,12 +6,11 @@
 body{
     font-family: sans-serif;
     padding: 50px;
-    background-color: #151515;
+    background-color: black;
     background-image: url('img/background.webp');
     background-position: center;
     background-size:cover ;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.8) 0 0 0 10000px inset;
     transition: all .2s;
 }
 ::-webkit-scrollbar {

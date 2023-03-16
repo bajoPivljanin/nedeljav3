@@ -299,7 +299,8 @@ form ul li{
   position: relative;
 }
 .navsearch button{
-    background-color: hsl(0, 0%, 18.82%);
+    /* background-color: hsl(0, 0%, 18.82%); */
+    background-color: #181c2f;
     color: white;
     padding: 5px 15px;
     border: 1px solid hsl(0, 0%, 26%);
@@ -607,9 +608,9 @@ form ul li{
 }
 
 
-/*--------------------------------------*/
+/* --------------------------------------*/
 
-.form {
+/* .form {
     position: relative;
     width: 20rem;
     height: 3rem;
@@ -646,20 +647,22 @@ form ul li{
     z-index: 90;
 }
 /* 1. When the input is in the focus state reduce the size of the label and move upwards 2. Keep label state when content is in input field */
-.form__input:focus ~ .form__label, .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+/* .form__input:focus ~ .form__label, .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
     top: 0.4rem;
     font-size: 0.8rem;
     left: 0.8rem;
     padding: 0 0.5rem;
     color: #fff;
     z-index: 100;
+} */ 
+
+
+/*-------------------------------------- */
+
+
+footer{
+    display: none;
 }
-
-
-/*--------------------------------------*/
-
-
-
 
 
   @media only screen and (max-width: 425px)
@@ -733,6 +736,18 @@ form ul li{
     }
     .popup-prof #username{
         padding-left: -40px;
+    }
+    footer{
+        display: block;
+        background: red;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+    } 
+    #imgsmall{
+        width: 10%;
     }
   }
 

@@ -98,6 +98,7 @@ const searchBar = document.querySelector(".navsearch");
 let list = document.getElementById("userneki");
 let popupUser = document.querySelector(".popup-prof");
 let popupUserImg = document.querySelector(".navimg");
+// let popupUserImg2 = document.querySelector("#imgsmall");
 // Add a click event listener to the document object
 document.addEventListener("click", function(event) {
   // Check if the target of the click event is inside the search bar
@@ -111,11 +112,15 @@ document.addEventListener("click", function(event) {
   {
     popupUser.style.transform='translateY(-450px)';
   }
+//   else if(!popupUserImg2.contains(event.target) && !popupUser.contains(event.target))
+//   {
+//     popupUser.style.transform='translateY(-450px)';
+//   }
 });
 
 document.querySelector('#allPostsWrapper').innerHTML
 
-document.querySelector('.navimg').addEventListener('click',()=>{
+document.querySelector('.divimg').addEventListener('click',()=>{
     let popup=document.querySelector('.popup-prof');
 
     if(popup.style.transform=='translateY(0px)')
@@ -128,3 +133,26 @@ document.querySelector('.navimg').addEventListener('click',()=>{
         popup.style.opacity="1";
     }
 });
+// document.querySelector('#imgsmall').addEventListener('click',()=>{
+//     let popup=document.querySelector('.popup-prof');
+
+//     if(popup.style.transform=='translateY(0px)')
+//     {
+//         popup.style.transform='translateY(-450px)';
+//         popup.style.opacity="0";
+//     }
+//     else{
+//         popup.style.transform='translateY(0px)';
+//         popup.style.opacity="1";
+//     }
+// });
+
+
+
+
+// var w = window.innerWidth;
+// if(w<=425)
+// {
+//     let footer=document.querySelector('footer');
+//     footer.style.display = "block";
+// }
