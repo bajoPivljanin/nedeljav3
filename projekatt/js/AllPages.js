@@ -108,7 +108,7 @@ document.addEventListener("click", function(event) {
     list.style.maxHeight="0px";
     document.querySelector('#aa').ariaPressed="false";
   }
-  if(!popupUserImg.contains(event.target) && !popupUser.contains(event.target))
+  if(!popupUserImg.contains(event.target) && !popupUser.contains(event.target) && !document.querySelector('#imgsmall').contains(event.target))
   {
     popupUser.style.transform='translateY(-450px)';
   }
@@ -123,6 +123,20 @@ document.querySelector('#allPostsWrapper').innerHTML
 document.querySelector('.divimg').addEventListener('click',()=>{
     let popup=document.querySelector('.popup-prof');
 
+    if(popup.style.transform=='translateY(0px)')
+    {
+        popup.style.transform='translateY(-450px)';
+        popup.style.opacity="0";
+    }
+    else{
+        popup.style.transform='translateY(0px)';
+        popup.style.opacity="1";
+    }
+});
+
+document.querySelector('#imgsmall').addEventListener('click',()=>{
+    let popup=document.querySelector('.popup-prof');
+    
     if(popup.style.transform=='translateY(0px)')
     {
         popup.style.transform='translateY(-450px)';
