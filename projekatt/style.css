@@ -734,10 +734,10 @@ footer{
         left: 0px;
         width: 100%;
         position: fixed;
-        transform: translateY(750px);
+        transform: translateY(100svh);
         border: none;
         border-top: 1px solid gray;
-        
+        height: 800px;
     }
       .popup-prof a .profile{
         width: 25%;

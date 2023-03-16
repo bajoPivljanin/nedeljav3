@@ -157,15 +157,18 @@ if(w<=425)
 {
     document.querySelector('#imgsmall').addEventListener('click',()=>{
         let popup=document.querySelector('.popup-prof');
+        let body = document.querySelector('body');
         
-        if(popup.style.transform=='translateY(562px)')
+        if(popup.style.transform=='translateY(0svh)')
         {
-            popup.style.transform='translateY(750px)';
+            popup.style.transform='translateY(100svh)';
             popup.style.opacity="0";
+            body.style.overflow='visible';
         }
         else{
-            popup.style.transform='translateY(562px)';
+            popup.style.transform='translateY(0svh)';
             popup.style.opacity="1";
+            body.style.overflow='hidden';
         }
     });
 }
