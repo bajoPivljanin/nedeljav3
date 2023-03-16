@@ -68,7 +68,6 @@ document.querySelector('#registrationForm').addEventListener('submit', e => {
 
 let lgn = document.querySelector('#loginForm')
 lgn.addEventListener('submit', e => {
-
     e.preventDefault()
 
     let email = document.querySelector('#login_email').value
@@ -84,7 +83,7 @@ lgn.addEventListener('submit', e => {
     
 })
 
-
+/*
 var w = window.innerWidth;
 if(w<=425)
 {
@@ -93,4 +92,4 @@ if(w<=425)
     div.innerHTML+='<p id="orspan" style="display:block;">or</p>'
 
    
-}
+}*/
