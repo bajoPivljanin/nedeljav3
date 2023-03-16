@@ -171,4 +171,21 @@ if(w<=425)
             body.style.overflow='hidden';
         }
     });
+
+    document.querySelector('#footstar').addEventListener('click',()=>{
+        let popup=document.querySelector('.left-wrapper .left-side');
+        let body = document.querySelector('body');
+        
+        if(popup.style.transform=='translateY(0svh)')
+        {
+            popup.style.transform='translateY(100svh)';
+            popup.style.opacity="0";
+            body.style.overflow='visible';
+        }
+        else{
+            popup.style.transform='translateY(0svh)';
+            popup.style.opacity="1";
+            body.style.overflow='hidden';
+        }
+    });
 }
