@@ -676,7 +676,7 @@ footer{
        display: none;
     }
     .navsearch input {
-        width: 50%;
+        width: 80%;
     }
     .navsearch .divimg img
     {
@@ -731,10 +731,15 @@ footer{
     }
     .popup-prof
     {
-        left: 160px;
-        width: 60%;
+        left: 0px;
+        width: 100%;
+        position: fixed;
+        transform: translateY(750px);
+        border: none;
+        border-top: 1px solid gray;
+        
     }
-    .popup-prof a .profile{
+      .popup-prof a .profile{
         width: 25%;
         margin-right: 20px;
     }
@@ -752,6 +757,7 @@ footer{
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         border-top: 1px solid gray;
+        z-index: 100;
     } 
     #imgsmall{
         width: 8%;
@@ -759,6 +765,9 @@ footer{
         border-radius: 100%;
         margin-left: 86%;
         margin-top:6px;
+    }
+    .divimg{
+        display: none;
     }
   }
 
